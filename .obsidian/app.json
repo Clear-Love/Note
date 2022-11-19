@@ -9,5 +9,6 @@
   "alwaysUpdateLinks": true,
   "showIndentGuide": false,
   "newFileLocation": "current",
-  "newLinkFormat": "relative"
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true
 }
