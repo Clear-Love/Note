@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
+                "file": "数据库作业/数据库大作业.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "数据库作业/数据库大作业.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "数据库作业/数据库大作业.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "数据库作业/数据库大作业.md"
               }
             }
           }
@@ -139,15 +139,15 @@
   },
   "active": "fc30b5b5a2ca81ff",
   "lastOpenFiles": [
-    "计算机接口作业/作业2.md",
     "README.md",
     "数据库作业/数据库大作业.md",
+    "数据库作业/第9章 存储过程与触发器的使用.md",
+    "数据库作业/第8章 多表查询的使用.md",
+    "计算机接口作业/作业2.md",
     "计算机接口作业/image/P111.jpg",
     "计算机接口作业/image/2022-11-16-19-58-54-image.png",
     "计算机接口作业/作业1.md",
     "计算机接口作业/image/p110.jpg",
-    "计算机接口作业/image/P111 1.jpg",
-    "数据库作业/第9章 存储过程与触发器的使用.md",
-    "数据库作业/第8章 多表查询的使用.md"
+    "计算机接口作业/image/P111 1.jpg"
   ]
 }
