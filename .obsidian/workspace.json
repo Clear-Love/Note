@@ -11,11 +11,9 @@
             "id": "fc30b5b5a2ca81ff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "数据库作业/第8章 多表查询的使用.md",
-                "mode": "source",
-                "source": false
+                "file": "image/图书实体.svg"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据库作业/第8章 多表查询的使用.md",
+                "file": "image/图书实体.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数据库作业/第8章 多表查询的使用.md",
+                "file": "image/图书实体.svg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数据库作业/第8章 多表查询的使用.md"
+                "file": "image/图书实体.svg"
               }
             }
           }
@@ -137,14 +135,14 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "fc30b5b5a2ca81ff",
+  "active": "4b65c0e543510d32",
   "lastOpenFiles": [
+    "数据库作业/第8章 多表查询的使用.md",
     "README.md",
     "计算机接口作业/作业2.md",
     "计算机接口作业/作业1.md",
     "数据库作业/第9章 存储过程与触发器的使用.md",
     "数据库作业/数据库大作业.md",
-    "数据库作业/第8章 多表查询的使用.md",
     "数据库作业/image/2022-11-18-16-36-33-image 1.png",
     "数据库作业/image/2022-11-18-16-36-33-image.png",
     "数据库作业/第 9 章存储过程与触发器的使用.md",
