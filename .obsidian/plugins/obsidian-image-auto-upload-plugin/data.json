@@ -2,7 +2,7 @@
   "uploadByClipSwitch": true,
   "uploader": "PicGo-Core",
   "uploadServer": "http://127.0.0.1:36677/upload",
-  "picgoCorePath": "C:\\Users\\86133\\AppData\\Local\\Yarn\\bin\\picgo",
+  "picgoCorePath": "C:\\Users\\86133\\AppData\\Local\\Yarn\\bin\\picgo.cmd",
   "menuMode": "auto",
   "workOnNetWork": false,
   "fixPath": false,
