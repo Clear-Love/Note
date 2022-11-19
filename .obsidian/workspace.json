@@ -13,11 +13,24 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "image/图书实体.svg"
+                "file": "计算机接口作业/image/P111.jpg"
+              }
+            }
+          },
+          {
+            "id": "191ff3bc9b280b19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机接口作业/作业2.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "image/图书实体.svg",
+                "file": "计算机接口作业/作业2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "image/图书实体.svg",
+                "file": "计算机接口作业/作业2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "image/图书实体.svg"
+                "file": "计算机接口作业/作业2.md"
               }
             }
           }
@@ -135,17 +148,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4b65c0e543510d32",
+  "active": "191ff3bc9b280b19",
   "lastOpenFiles": [
-    "数据库作业/第8章 多表查询的使用.md",
-    "README.md",
-    "计算机接口作业/作业2.md",
     "计算机接口作业/作业1.md",
+    "计算机接口作业/image/p110.jpg",
+    "计算机接口作业/image/P111 1.jpg",
+    "计算机接口作业/image/P111.jpg",
+    "计算机接口作业/作业2.md",
     "数据库作业/第9章 存储过程与触发器的使用.md",
-    "数据库作业/数据库大作业.md",
-    "数据库作业/image/2022-11-18-16-36-33-image 1.png",
-    "数据库作业/image/2022-11-18-16-36-33-image.png",
-    "数据库作业/第 9 章存储过程与触发器的使用.md",
-    "计算机接口作业/image/接口电路.jpg"
+    "数据库作业/第8章 多表查询的使用.md",
+    "image/图书实体.svg",
+    "README.md",
+    "数据库作业/数据库大作业.md"
   ]
 }
