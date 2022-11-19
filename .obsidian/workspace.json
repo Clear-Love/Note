@@ -11,26 +11,15 @@
             "id": "fc30b5b5a2ca81ff",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "计算机接口作业/image/P111.jpg"
-              }
-            }
-          },
-          {
-            "id": "191ff3bc9b280b19",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机接口作业/作业2.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,11 +85,11 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机接口作业/作业2.md",
-                "collapseAll": false,
+                "file": "README.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -113,8 +102,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机接口作业/作业2.md",
-                "linksCollapsed": false,
+                "file": "README.md",
+                "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -136,29 +125,29 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机接口作业/作业2.md"
+                "file": "README.md"
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "191ff3bc9b280b19",
+  "active": "3db85e5366a9eac7",
   "lastOpenFiles": [
+    "计算机接口作业/image/P111.jpg",
+    "README.md",
+    "计算机接口作业/image/2022-11-16-19-58-54-image.png",
+    "计算机接口作业/作业2.md",
     "计算机接口作业/作业1.md",
     "计算机接口作业/image/p110.jpg",
     "计算机接口作业/image/P111 1.jpg",
-    "计算机接口作业/image/P111.jpg",
-    "计算机接口作业/作业2.md",
     "数据库作业/第9章 存储过程与触发器的使用.md",
     "数据库作业/第8章 多表查询的使用.md",
-    "image/图书实体.svg",
-    "README.md",
-    "数据库作业/数据库大作业.md"
+    "image/图书实体.svg"
   ]
 }
