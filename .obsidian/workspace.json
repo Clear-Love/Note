@@ -20,6 +20,20 @@
             }
           }
         ]
+      },
+      {
+        "id": "f647d2d2e3477187",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5bf71abbd311b579",
+            "type": "leaf",
+            "state": {
+              "type": "markdown-table-editor-view",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -145,7 +159,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d0a0c00351f3ac5d",
+  "active": "5bf71abbd311b579",
   "lastOpenFiles": [
     "数据库作业/第9章 存储过程与触发器的使用.md",
     "数据库作业/数据库大作业.md",
