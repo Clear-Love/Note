@@ -6,6 +6,7 @@
       {
         "id": "1155bf9de9690b31",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "e159cbe86ceb38d9",
@@ -22,11 +23,12 @@
         ]
       },
       {
-        "id": "232018611c4a86b4",
+        "id": "b3f12874c03bda31",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
-            "id": "2fd85e8e809e976b",
+            "id": "cfb6341b4e5ad46c",
             "type": "leaf",
             "state": {
               "type": "markdown-table-editor-view",
@@ -159,7 +161,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2fd85e8e809e976b",
+  "active": "cfb6341b4e5ad46c",
   "lastOpenFiles": [
     "数据库作业.md",
     "数据库作业/数据库大作业.md",
