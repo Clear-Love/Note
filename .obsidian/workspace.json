@@ -4,12 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1155bf9de9690b31",
+        "id": "b3f12874c03bda31",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
-            "id": "e159cbe86ceb38d9",
+            "id": "d0a0c00351f3ac5d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -23,12 +22,11 @@
         ]
       },
       {
-        "id": "b3f12874c03bda31",
+        "id": "59af53a251d0dece",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
-            "id": "cfb6341b4e5ad46c",
+            "id": "89c6a00849dc8347",
             "type": "leaf",
             "state": {
               "type": "markdown-table-editor-view",
@@ -161,17 +159,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cfb6341b4e5ad46c",
+  "active": "d0a0c00351f3ac5d",
   "lastOpenFiles": [
-    "数据库作业.md",
+    "数据库作业/第9章 存储过程与触发器的使用.md",
     "数据库作业/数据库大作业.md",
+    "数据库作业/电子书管理网站E-R图.svg.md",
+    "数据库作业.md",
     "数据库作业/第8章 多表查询的使用.md",
     "README.md",
     "计算机接口作业/作业2.md",
     "计算机接口作业/未命名.md",
     "jasdfj.md",
-    "计算机接口作业/image/P111.jpg",
-    "image/电子书管理网站E-R图.svg",
-    "数据库作业/第9章 存储过程与触发器的使用.md"
+    "计算机接口作业/image/P111.jpg"
   ]
 }
