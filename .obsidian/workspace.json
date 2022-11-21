@@ -11,12 +11,8 @@
             "id": "d0a0c00351f3ac5d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "数据库作业/数据库大作业 —— 电子书管理系统.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据库作业/数据库大作业 —— 电子书管理系统.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数据库作业/数据库大作业 —— 电子书管理系统.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "数据库作业/数据库大作业 —— 电子书管理系统.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -136,7 +128,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b84b6ebd12ec2789",
+  "active": "4b65c0e543510d32",
   "lastOpenFiles": [
     "数据库作业/数据库大作业 —— 电子书管理系统.md",
     "数据库作业/第9章 存储过程与触发器的使用.md",
