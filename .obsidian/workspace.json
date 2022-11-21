@@ -128,14 +128,6 @@
                 "file": "数据库作业/数据库大作业 —— 电子书管理系统.md"
               }
             }
-          },
-          {
-            "id": "0cdfd7b7df8dbdf0",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
         ],
         "currentTab": 3
@@ -144,11 +136,11 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "d0a0c00351f3ac5d",
+  "active": "b84b6ebd12ec2789",
   "lastOpenFiles": [
+    "数据库作业/数据库大作业 —— 电子书管理系统.md",
     "数据库作业/第9章 存储过程与触发器的使用.md",
     "数据库作业/第8章 多表查询的使用.md",
-    "数据库作业/数据库大作业 —— 电子书管理系统.md",
     "数据库作业/image/2022-11-18-16-27-26-image.png",
     "数据库作业/image/2022-11-18-16-29-04-image.png",
     "数据库作业/image/2022-11-18-16-30-12-image.png",
