@@ -6,5 +6,7 @@
   "obsidian-hover-editor",
   "markdown-prettifier",
   "obsidian-image-auto-upload-plugin",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-table-generator",
+  "obsidian-kanban"
 ]
