@@ -4,5 +4,7 @@
   "markdown-table-editor",
   "table-extended",
   "obsidian-hover-editor",
-  "markdown-prettifier"
+  "markdown-prettifier",
+  "obsidian-image-auto-upload-plugin",
+  "obsidian-git"
 ]

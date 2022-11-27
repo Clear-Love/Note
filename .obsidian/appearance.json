@@ -4,5 +4,6 @@
   "theme": "moonstone",
   "monospaceFontFamily": "JetBrainsMono Nerd Font Mono",
   "translucency": false,
-  "nativeMenus": false
+  "nativeMenus": false,
+  "baseFontSize": 17
 }
