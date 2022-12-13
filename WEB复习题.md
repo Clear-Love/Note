@@ -1,5 +1,35 @@
 ### 第一章
 
+1. 什么是 URL, 什么是 URI，他们由哪几部分组成？URL 与 URI 有什么关系？
+   <font color="#ff0000">URL</font> 是 uniform resource locator，统一资源定位器，指向 Internet 上位于某个位置的某个资源。
+   <font color="#ff0000">URI</font> 是 uniform resource identifier，统一资源标识符，是以特定语法标识一个资源的字符串。
+   <font color="#ff0000">URL 由四部分组成</font>： <font color="#00b0f0">协议名称</font><font color="#00b0f0">、所有主机的 DNS 名、可选的端口号和资源的名称</font>。
+   <font color="#ff0000">URI 由模式和模式特有的部分组成</font>，他们之间用冒号隔开。
+   一般格式如下：_schema: schema - specific - part
+   <font color="#ff0000">关系</font>：URI 是 URL 与 URN 的超集。
+
+2. HTML 常用标签的使用（表单、文本框、确认按钮等），尤其是 form 标签，包含哪些属性？①<font color=" #ff0000 ">method</font> 属性规定用于发送 form-data 的 HTTP 方法。实际上就是请求的方式。
+   ②<font color="#ff0000">name</font> 属性表单的名称。
+   ③<font color="#ff0000">action</font> 属性指定表单请求的路径。
+   ④<font color="#ff0000">target</font> 属性指定 action 的 Url 在哪里打开。
+
+3. 在服务器端动态生成 Web 页面有哪些技术？它与客户端动态 Web 文档技术有什么区别？Servlet 和 JSP 分别属于哪种技术？
+   <font color="#ff0000">CGI 技术</font>，服务器扩展技术，在 HTML 页面中嵌入脚本技术
+   <font color=" #ff0000 ">Servlet </font>属于服务器扩展技术；
+   <font color="#ff0000">JSP</font> 属于在 HTML 页面中嵌入脚本技术
+
+4. 什么是 Servlet？什么是 JSP？他们的主要作用是什么？
+   <font color="#ff0000">Servlet</font> 称为<span style="background:#d3f8b6">小服务程序或服务连接器</span>，用 Java 编写的服务器端程序，主要功能在于交互式地浏览和修改数据，生成动态 Web 内容。
+   <font color="#ff0000">JSP</font> 全称 Java Server Pages，<span style="background:#d3f8b6">是一种动态网页开发技术</span>，是一种 Java servlet，主要用于实现 Java web 应用程序的用户界面部分。JSP 通过网页表单获取用户输入数据、访问数据库及其他数据源，然后动态地创建网页。
+
+5. 所有 Web 应用程序的根目录是？WEB-INF 目录包含哪些内容？
+   是 <span style="background:#d3f8b6">WEB-INF 目录</span>。包括：
+   1、<font color="#ff0000">web.xml</font> 是部署描述文件
+   2、<font color="#ff0000">classes</font> 用来放置应用程序用到的自定义类 (. class)，必须包括包 (package) 结构。
+   3、<font color="#ff0000">lib</font> 用来放置应用程序用到的 JAR 文件。
+
+
+#### 作业题
 1 . **简述请求转发和响应重定向的区别**？
    使用请求转发，在客户的浏览器地址栏中不会显示转发后的资源地址。使用响应重定向，在浏览器的地址栏中可以看到地址的变化。使用请求转发可以共享请求作用域中的数据，使用响应重定向可以共享会话作用域中的数据。
    
@@ -69,6 +99,186 @@ RequestDispatcher rd =（9）request. __________  ("/welcome.jsp");
  10. forward
      
 ### 第二章
+
+1. 什么是 Servlet 的生命周期？Servlet 的生命周期包括哪几个阶段？
+   <font color="#ff0000">Servlet</font> 作为一种在容器中运行的组件，有一个从创建到销毁的过程被称为 Servlet 的<font color="#ff0000">生命周期</font>。
+   包括四个阶段：加载和<span style="background:#d3f8b6">实例化</span>、<span style="background:#d3f8b6">初始化</span>、<span style="background:#d3f8b6">提供服务</span>、<span style="background:#d3f8b6">销毁</span>
+
+2. 常用的 HTTP 请求方法有哪两种？各自的特点是什么？在 Httpservlet 中处理这些请求对应什么方法？
+   <font color="#ff0000">GET</font> 方法和 <font color="#ff0000">POST</font> 方法；
+   <span style="background:#d3f8b6">GET 方法用来检索资源</span>，GET 对应 doGet () 方法;
+   <span style="background:#d3f8b6">POST 方法用来向服务器发送需要处理的数据</span>，POST 对应 doPost () 方法;
+
+3. 有一个 URL, http://www.myserver.com/hello ？userName=John，问号后面的内容称为什么？有什么含义？<font color="#ff0000">查询串</font>。
+
+4. 如何检索请求参数？
+   可以使用 ServletRequest 接口中定义的方法
+   （1）<font color="#ff0000">public String getParameter (String name)</font>: 返回由 name 指定的请求参数值，如果指定的参数不存在，则返回 null 值。若指定的参数存在，用户没有提供值，则返回空字符串（使用该方法必须保证指定参数值只有一个）
+   （2）<font color=" #ff0000 ">Public String[] getParameterValues (String name)</font>: 返回指定参数 name 所包含的所有值，返回值是一个 String 数组，如果指定的参数不存在，则返回 null 值，该方法适用于参数有多个值
+   （3）<font color="#ff0000">Public Enumeration getParameter (String name)</font>: 返回一个 Enumeration 对象，它包含请求中所有的请求参数名，元素是 String 类型的。如果没有请求参数，则返回一个空的 Enumeration 对象
+   （4）<font color="#ff0000">Public Ma getParameterMaps ()</font>: 返回一个包含所有请求参数的 Map 对象，该对象以参数名作为键、以参数值作为值。键的类型为 String，值的类型为 String 数组。
+
+5. 如何实现请求转发？
+   需要通过请求对象的 getRequestDispatcher () 得到 RequestDispatcher 对象，该对象称为请求转发器对象，格式为 RequestDispatcher getRequestDispatcher（String path），然后通过 RequestDispatcher 接口中的 forward 方法（public void forward (ServletRequest request, ServletResponse response)）实现转发
+
+6. 如何使用请求对象存储数据？
+
+解：
+
+ServletRequest 接口中的方法
+
+（1）public void setAttribute (String name, Object obj): 将指定名称 name 的对象 obj 作为属性值存储到请求对象中
+
+（2）public Object setAttribute (String name): 返回请求对象中存储的指定名称的属性值，如果指定名称的属性不存在，返回 null，使用该方法在必要时需要作类型转换。
+
+（3）public Enumeration getAttribute name (): 返回一个 Enumeration 对象，它是请求对象中包含的所有属性名的枚举
+
+（4）Public void removeAttribute (String name): 从请求对象中删除指定名称的属性
+
+7. SerevletResponse 如何向客户发送文本数据（调用 getWriter（）方法获得 Printwriter 对象）
+
+解：
+
+8. 如何设置响应的内容类型?
+
+解：
+
+使用响应对象的 setContentType (),
+
+例：response. setContentType (“text/html; charset=UTF-8”)
+
+设置响应头
+
+（1）public void setHeader (String name, String value): 将指定名称的响应头设置为指定的值
+
+（2）public void setIntHeader (String name, int value): 用给定的名称和整数值设置响应头
+
+（3）public void setDateHeader (String name, long date): 用给定的名称和日期值设置响应头
+
+（4）public void addHeader (String name, String value): 用给定的名称和值添加响应头
+
+（5）public void addIntHeader (String name, int value): 用给定的名称和整数值添加响应头
+
+（6）public void addDateHeader (String name, long date): 用给定的名称和日期值添加响应头
+
+（7）Public boolean containsHeader (String name): 返回是否已经设置指定的响应头
+
+9. 如何实现响应重定向？
+
+解：
+
+响应重定向是通过响应对象的 sendRedirect () 实现，格式为 public void sendRedirect (String location)
+
+10. RequestDispatcher 的 forward 方法转发请求和使用 sendRedirect () 方法重定向请求有何不同？
+
+解：
+
+forward () 方法转发请求是服务器端控制权的转向，客户端地址栏中不显示转发后的资源地址。
+
+sendRedirect () 方法是服务器向浏览器发送 302 状态码，它使浏览器连接到新的位置，浏览器地址栏可看到地址的变化。使用重定向，资源不能位于 WEB-INF 目录中。
+
+11. 部署描述文件的名称和作用是什么？`<servlet>` 元素包含哪些子元素？有什么含义？（尤其是 `<servlet-mapping>` 元素包含哪些子元素？
+
+解：
+
+Deployment Descripior DD，用来初始化 Web 应用程序的组件
+
+`<servlet>` 元素包含 `<servlet-name>` 元素, 该元素用来定义 Servlet 名称；`<servlet-class>` 元素, 该元素指定 Servlet 类的完整名称；`<init-param>` 元素, 该元素定义向 Servlet 传递的初始化参数；`<load-on-startup>` 元素，该元素指定是否在 Web 应用程序启动时载入该 Servlet。
+
+`<servlet-mapping>` 元素包含 `< servlet- name >` 和 `< url-pattern >`
+
+12. 请求 URL 的组成? 容器如何解析 URL?
+
+解：
+
+请求 URL 由协议与主机名、上下文路径、Servlet 路径、路径信息、查询串组成
+
+（1）当容器接收到该请求 URL 后，它首先解析出 URI。然后从中取出第一部分作为上下文路径，这里是/helloweb，接下来在容器中查找是否有名称为 helloweb 的 Web 应用程序
+
+（2）如果没有名为 helloweb 的 Web 应用程序，则上下文路径为空，请求将发送到默认的 Web 应用程序
+
+（3）如果有名为 helloweb 的应用程序，则继续解析下一部分。容器尝试将 Servlet 路径与 Servlet 映射匹配，如果找到一个匹配，则完整的 URI 请求就是 Servlet 路径，在这种情况下，路径信息为 null
+
+（4）容器沿着请求 URI 路径树向下，每次一层目录，使用“/”作为路径分隔符，反复尝试最长的路径，看是否与一个 Servlst 匹配。如果有一个匹配，请求 URI 的匹配部分就是 Servlet 路径，剩余的部分是路径信息
+
+（5）如果不能找到匹配的资源，容器将向客户发送一个 404 错误消息
+
+13. @WebServlet 和@WebInitParam 注解的用法。
+
+14. 什么是 ServletConfig 对象？如何获得该对象？该对象定义哪些方法？（尤其是 getInitParameter（）方法）
+
+解：
+
+在 Servlet 初始化时，容器将调用 init（ServletConfig），并为其传递一个 ServletConfig 对象，该对象称为 Servlet 配置对象
+
+（1）覆盖 Servlet 的 init（ServletConfig config），然后把容器创建的 ServletConfig 对象保存到一个成员变量中，如：ServletConfig config = null;
+
+Public void init (ServletConfig config) {
+
+      super.init(config);
+
+this. config = config;
+
+}
+
+（2）在 Servlet 中直接使用 getServletConfig () 获得 ServletConfig 对象，如：ServletConfig config=getServletConfig ()
+
+ServletConfig 接口定义 4 个方式：
+
+（1）public String getInitParameter（String name）：返回指定名称的初始化参数值。若该参数不存在，则返回 null。初始化参数是在 Servlet 初始化时容器从 DD 文件中取出，然后把它包装到 ServletConfig 对象中
+
+（2）Public Enumeration getInitParameterNames（）：返回一个包含所有初始化参数名的 Enumeration 对象，若 Servlet 没有初始化参数，则返回一个空的 Enumeration 对象
+
+（3）public String getServletName（）：返回在 DD 文件中＜servlet-name＞元素指定的 Servlet 名称
+
+（4）public ServletContext getServletContext (): 返回该 Servlet 所在的上下文对象在部署描述文件中和注解中如何设置 Servlet 初始化参数。
+
+15. 什么是 ServletContext 对象？如何获得该对象？掌握该对象定义的 getInitParameter（）方法，Servlet 上下文对象的的 RequestDispatcher 方法和 setAttribute ()，getAttribute () 方法的作用。
+
+解：
+
+Web 容器在启动时会加载每个 web 应用程序·并为每个 Web 应用程序创建一个唯一的 ServletContext 对象, 该对象一般称为 Servlet 上下文对象。
+
+16. 在 DD 文件中如何声明应用程序的初始化参数？
+
+解：
+
+<init-param>
+
+<param-name>name</param-name>
+
+<param-value>value</param-value>
+
+</init-param>
+
+17. 使用 ServletContext 对象存储数据，与使用请求对象存储数据有什么区别？
+
+解：
+
+(1) public void setAttribute (String name, Object object): 将给定名称的属性派对象绑
+
+定到上下文对象上。
+
+(2) public Object getAttribute (String name): 返回绑定到上下文对象上的给定名称的属
+
+性值，如果没有该属性，则返回 null.
+
+(3) public Enumeration getAttributeNames (): 返回绑定到上下文对象上的所有属性名
+
+) Enumeration 对象.
+
+(4) public void removeAttribute (String name): 从上下文对象中删除指定名称的属性。
+
+18. Servlet 上下文初始化参数和 Servlet 初始化参数有什么区别？
+
+解：
+
+1. Servlet 上下文初始化参数与 Servlet 初始化参数类似，区别是 Servlet 上下文初始化参数对整个 web 应用而 Servlet 初始化参数只对应一个 servlet
+
+2. Servlet 上下文初始化参数在 servlet 中直接调用 getServletContext (). getInitParameter ()
+
+3. Servlet 初始化参数定义在 web. xml 中的一个 servlet 元素中，通过 ServletConfig 接口的 getInitParameter (java. lang. String name) 方法。
+
 1. 有一个 URL 为 http://www.myserver.com/hello?userName=John ，问号 (?) 后面的内容称为<font color=" #ff0000 ">请求参数</font>
 2. 要使向服务器发送的数据不在浏览器的地址栏中显示，应该使用 <font color=" #ff0000 ">Post</font> 方法 
 3. `<jsp:include>` 标签可以在请求时把另一个 JSP 页面的结果包含到当前页面中
@@ -183,13 +393,20 @@ displayStudent.jsp ：从JavaBeans对象中收集学生信息，并在该页面
 
 ### 第四章
 
-1. 调用哪个方法会使会话失效？<font color="#ff0000">session.invalidate()</font>
+1. 调用哪个方法会使会话失效？<font color=" #ff0000 ">session. invalidate ()</font>
+   
 2. 下面通过哪个接口或类获取与用户相关的会话对象 <font color=" #ff0000 ">HttpServletRequest</font>
+   
 3. 给定 request 是一个 HttpServletRequest 对象，下面哪行代码会在不存在会话的情况下创建一个会话？<font color=" #ff0000 ">request. getSession ()</font>
+   
 4. HTTP 协议变成了有状态的协议服务器为用户所产生的会话 ID 是唯一的浏览器可设置是否使用 cookie 的功能 
+   
 5. 会话的超时时间设置为-1，则会话永远不会过期。
+   
 6. 给定一个会话对象 s，有两个属性分别为 myAttrl 和 myAttr2, 下面哪段代码会把这两个属性从会话中删除 
+   
    <font color=" #ff0000 ">s.removeAttribute ("myAttrl") s.removeAttribute ("myAttr2")</font>
+   
 7. 将下面哪个代码片段插入到 doGet（）中可以正确记录用户的 GET 请求的数量？
    
 ```java
@@ -226,11 +443,15 @@ value=cookies[i].getValue();
 ### 第五章
 
 1. Statement 接口的 exeteQuery (String sql) 方法用来执行 SQL 的 <font color=" #ff0000 ">查询</font> 语句
+   
 2. PreparedStatement 对象通常用来执行动态 SQL 语句，此时需要在 SQL 语句中通过
    <font color=" #ff0000 ">问号</font> 指定参数
+   
 3. 使用 Class 类的 forName () 加载驱动程序需要捕获什么异常？
     ：<font color=" #ff0000 ">ClassNotFoundException</font>
+    
 4. Web 应用程序需要访问数据库，数据库驱动程序应该安装在哪个目录？WEB-INF\lib
+   
 5. 对于新产生的结果集对象，调用 ResultSet 的（）方法，使游标指向第一行 <font color=" #ff0000 ">next ()</font>
    
 - 试说明使用数据源对象连接数据库的优点是什么？通过数据源对象如何获得连接对象？
@@ -299,8 +520,11 @@ conn.close();
 ### 第六章
 
 1. EL 表达式语言可用于在网页上生成动态的内容并代替 JSP 元素，EL 表达式语言的语法是 <font color=" #ff0000 ">${ELexpression}</font>
+   
 2. 在 JavaWeb 应用程序中，EL 表达式可用于访问（）中存储的数据 <font color=" #ff0000 ">JavaBeans</font>
+   
 3. 下面哪个变量不能用在 EL 表达式中？<font color=" #ff0000 ">contextScope</font>
+   
 4. 表达式${(10 le 10)＆＆! (24+ 1 lt 24)?”Yes”:”No”}的结果是 <font color=" #ff0000 ">YES</font>
    `算术运算符 + 、 - 、 * 、 / （或 div ）和 % （或 mod ）`
    
@@ -309,5 +533,37 @@ conn.close();
    `逻辑运算符 && （或` `and` `）、 || （或` `or` `）和 ! （或 not ）`
    
    `验证运算符` `empty`
-5. 
+5. EL 显示请求的 URI，下面哪个是正确的 <font color=" #ff0000 ">${pageContext. request. requestURI}</font>
+   
+6. EL 表达式${user. loginName}的执行效果等同于以下哪个选项：? (user 是一个 JavaBean 对象，loginName 是它其中的一个属性。） <font color=" #ff0000 ">＜%=user. getLoginName ()%＞</font>
+   
+7. 一个 Web 站点将管理员的 E-mail 地址存储在一个名为 master-email 的 ServletContext 参数中，如何使用 EL 得到这个值<font color=" #ff0000 ">${initParam. master-email}</font>
+   ServletContext 用于存放全局变量
+   
+8. 给定一个 HTML 表单，其中使用了有一个名为 hobbies 的复选框，如下所示：  
+   兴趣：＜input type=”checkbox” name=”hobbies” value=”reading”＞  
+   文学＜input type=”checkbox” name=”hobbies” value=”sport”＞  
+   体育＜input type=”checkbox” name=”hobbies” value=”computer”＞电脑＜br＞  下面哪些表达式能够计算并得到 hobbies 参数的第一个值?
+   ：<font color=" #ff0000 ">${ paramValues . hobbies[0]}</font>
+   
+
+- 写出使用 EL 表达式访问应用作用域上存储的属性名为 count 的变量所对应的值的语句：
+  ${<font color=" #ff0000 ">applicationScope</font>. count}   
+  
+- 阅读下列程序片段，写成访问该页面的输出结果。 
+
+```java
+＜%@page import="java.util.ArrayList"＞  
+
+＜% ArrayListcity=newArrayList(); city.add("Beijing");  
+
+city.add("Shanghai");  
+
+city.add("Guangzhou"); 
+
+ request.setAttribute("myLocation",city);  %＞
+```
+
+我最喜欢的城市是:${myLocation[2]}.     输出结果：<font color=" #ff0000 ">Guangzhou</font>
+
    
