@@ -291,172 +291,96 @@ x与y的和是：＜%=x+y %＞
    <jsp:include page = “<% = pageURL%>”/>
 
 7. JSP 隐含变量有哪些？各代表什么含义？
-   <font color="#ff0000">request</font> HttpServletRequest 类的实例，引用页面的当前请求对象。
-
-   <font color="#ff0000">response</font> HttpServletResponse 类的实例，用来向客户发送一个响应。
-
-   <font color="#ff0000">out</font> PrintWriter 类的实例，引用页面输出流，用于把结果输出至网页上。
-
-  <font color="#ff0000"> session</font> HttpSession 类的实例，引用用户对话。
-
-   <font color="#ff0000">application</font> ServletContext 类的实例，引用 Web 应用程序上下文。
-
-   <font color="#ff0000">config</font> ServletConfig 类的实例，引用 Servlet 的配置对象
-
-   <font color="#ff0000">pageContext</font> PageContext 类的实例，引用页面上下文，提供对 JSP 页面所有对象以及命名空间的访问
-
-   <font color="#ff0000">page</font> 引用页面的 Servlet 实例
-
-   <font color="#ff0000">exception</font> Exception 类的对象，代表发生错误的 JSP 页面中对应的异常对象
+   
+|request|**HttpServletRequest**类的实例，引用页面的当前请求对象。|
+| - | - |
+|response|**HttpServletResponse**类的实例，用来向客户发送一个响应。|
+|out|**PrintWriter**类的实例，引用页面输出流，用于把结果输出至网页上。|
+|session|**HttpSession**类的实例，引用用户对话。|
+|application|**ServletContext**类的实例，引用Web应用程序上下文。|
+|config|**ServletConfig**类的实例，引用Servlet的配置对象|
+|pageContext|<p>**PageContext**类的实例，引用页面上下文，</p><p>提供对JSP页面所有对象以及命名空间的访问</p>|
+|page|引用页面的Servlet实例|
+|exception|**Exception**类的对象，代表发生错误的JSP页面中对应的异常对象|
 
 8. page 指令的常用属性（<span style="background:#d3f8b6">import, contentType, pageEncoding, session, errorPage, isErrorPage</span>）
 
 9. 什么是静态包含？如何用 include 指令实现？什么是动态包含？如何用 jsp：include 动作实现？他们之间有什么区别？
-   静态包含是在 JSP 页面转换阶段将另一个文件的内容包含在当前 JSP 页面中。
-   `<%@ include file = “relativeURL”%>`
+   <font color="#ff0000">静态包含</font>是在 JSP <span style="background:#d3f8b6">页面转换阶段将另一个文件的内容包含在当前 JSP 页面中</span>。
+   < %@ include file = “relativeURL”% >
    
-   动态包含是在请求时将另一个页面的输出包含到主页面的输出中。
+   <font color="#ff0000">动态包含</font>是在<span style="background:#d3f8b6">请求时将另一个页面的输出包含到主页面的输出中</span>。
    <jsp: include page=”relativeURL” flush=”true|false”>
-
-区别：
-
-1. 静态导入是将导入页面的代码完全融入，两个页面融合成一个整体 Servlet；而动态 include 是在 Servlet 中使用 include 方法来引入被导入语页面的内容。
-
-2. 静态导入时页面的编译指令会起作用；而动态导入时被导入页面的编译指令则失去作用，只是插入被导入页面的 body 内容
-
-3. 最直观的区别就是动态包含可以增加额外的参数
+   
+   <font color=" #ff0000 ">区别</font>：
+   1. 静态导入是将导入页面的代码完全融入，两个页面融合成一个整体 Servlet；而动态 include 是在 Servlet 中使用 include 方法来引入被导入语页面的内容。
+   2. 静态导入时页面的编译指令会起作用；而动态导入时被导入页面的编译指令则失去作用，只是插入被导入页面的 body 内容
+   3. 最直观的区别就是动态包含可以增加额外的参数
 
 10. 在 JSP 页面实现请求转发的三种方法？
+   <font color=" #ff0000 "> 1）</font>:
+    <%
+          RequestDispatcher view = 
+          request. getRequestDispatcher ("other. jsp");
+          view. forward (request, response);
+    %>
+    <font color=" #ff0000 ">2）</font>:
+    <%
+          pageContext. forward ("other. jsp");
+    %>
+    <font color=" #ff0000 ">3）</font>:
+    <jsp:forward page="other.jsp" />
 
-解：
+**11. JSP 的作用域对象有哪些？它们的作用域范围是什么？如何在这些对象上设置和获得属性？**
 
-1）<%
+|**作用域名**|**对应的对象**|**存在性和可访问性**|
+| - | - | - |
+|**应用作用域**|**application**|**整个Web应用程序有效**|
+|**会话作用域**|**session**|**一个用户对话范围内有效**|
+|**请求作用域**|**request**|**在用户的请求和转发的请求内有效**|
+|**页面作用域**|**pageContext**|**只在当前的页面内有效**|
 
-      RequestDispatcher view = request.getRequestDispatcher("other.jsp");
-
-      view.forward(request, response);
-
-%>
-
-2）<%
-
-          pageContext.forward("other.jsp");
-
-%>
-
-3）`<jsp:forward page="other.jsp" />`
-
-11. JSP 的作用域对象有哪些？它们的作用域范围是什么？如何在这些对象上设置和获得属性？
-
-解：
-
-作用域名
-
-对应的对象
-
-存在性和可访问性
-
-应用作用域
-
-application
-
-整个 Web 应用程序有效
-
-会话作用域
-
-session
-
-一个用户对话范围内有效
-
-请求作用域
-
-request
-
-在用户的请求和转发的请求内有效
-
-页面作用域
-
-pageContext
-
-只在当前的页面内有效
-
-应用作用域：
-
-设置属性：ServletContext context = getServletContext ();
-
-              Context.setAttribute(“foo”,one);
-
+<font color="#ff0000">应用作用域</font>：
+设置属性：ServletContext context = getServletContext();
+        Context. setAttribute (“foo”, one);
 获得属性：<% = application. getAttribute (“foo”); %>
 
-会话作用域：
-
-HttpSession session = request. getSession (true);
-
-设置属性：session. setAttribute (“name”, value);
-
+<font color="#ff0000">会话作用域</font>：HttpSession session = request.getSession(true);
+设置属性：session.setAttribute(“name”,value);
 获得属性：session. getAttribute (“name”);
 
-请求作用域：
+<font color="#ff0000">请求作用域</font>：
+设置属性：request.setAttribute(“name”,value);
+获得属性：request. getAttribute (“name”)
 
-设置属性：request. setAttribute (“name”, value);
+<font color="#ff0000">页面作用域</font>：
+设置属性：<% pageContext.setAttribute(“name”,value);%
+获得属性：<% pageContext.getAttribute(“name”);%>
 
-获得属性：request. getAttribute (“name”);
-
-页面作用域：
-
-设置属性：<% pageContext. setAttribute (“name”, value);%>
-
-获得属性：<% pageContext. getAttribute (“name”);%>
 
 12. 什么是 JavaBeans？要遵循的规范是什么？
-
-解：
-
-JavaBeans 是 Java 平台的组件技术，在 JavaWeb 开发中常用 JavaBeans 来存放数据、封装业务逻辑等，从而很好地实现业务逻辑和表示逻辑的分离，是系统具有更好的健壮性和灵活性。
-
-规范：
-
-（1）JavaBeans 应该是 public 类，并且具有无参数的 public 构造方法，通过定义不带参数的构造方法或使用默认的构造方法均可满足这个要求。
-
-（2）JavaBeans 类的成员变量一般称为属性。对应每个属性访问权限一般定义为 private。
-
-（3）每个属性通常定义两个 public 方法，一个是访问方法（getter），另一个是修改方法（setter）使用它们访问和修改 JavaBeans 的属性值。
+    JavaBeans 是 Java 平台的组件技术，在 JavaWeb 开发中常用 JavaBeans 来存放数据、封装业务逻辑等，从而很好地实现业务逻辑和表示逻辑的分离，是系统具有更好的健壮性和灵活性。
+    <font color="#ff0000">规范</font>：
+    （1）JavaBeans 应该是 public 类，并且具有无参数的 public 构造方法，通过定义不带参数的构造方法或使用默认的构造方法均可满足这个要求。
+    （2）JavaBeans 类的成员变量一般称为属性。对应每个属性访问权限一般定义为 private。
+    （3）每个属性通常定义两个 public 方法，一个是访问方法（getter），另一个是修改方法（setter）使用它们访问和修改 JavaBeans 的属性值。
 
 13. 在 JSP 中如何使用 JavaBeans？（<jsp:useBean> <jsp:setProperty> <jsp:getProperty>），这些动作包含哪些属性，代表什么含义？
-
-解：
-
-<jsp:useBean>动作用来在 JSP 页面中查找或创建一个 bean 实例。
-
-属性：
-
-id 属性用来唯一标识一个 bean 实例，该属性是必须的。
-
-scope 属性指定 bean 实例的作用域。
-
-class 属性指定创建 bean 实例的 Java 类。
-
-Type 属性指定由 id 属性声明的变量的类型，由于该变量是在请求时只想实际的 bean 实例，其类型必须与 bean 类的类型相同或者是其超类，或者是一个 bean 类实现的接口。
-
-<jsp:setProperty>动作用来给 bean 实例的属性赋值。
-
-属性：
-
-name 属性用来标识一个 bean 实例，该实例必须是前面使用<jsp:useBean>动作声明的，并且 name 属性值必须与<jsp:useBean>动作中指定的一个 id 属性相同。
-
-property 属性指定要设置值的 bean 实例的属性，容器将根据指定的 bean 的属性调用适当的 setXxx ()，因此该属性也是必须的。
-
-value 属性为 bean 的属性指定新值，该属性值可以接受请求时属性表达式。
-
-param 属性指定请求参数名，如果请求中包含指定的参数，那么使用该参数值来设置 bean 的属性值。
-
-Value 和 param 都可选并且不能同时使用。
-
-<jsp:getProperty>动作检索并向输出流中打印 bean 的属性值。
-
-属性：
-
-name 属性指定 bean 实例名，property 属性指定要输出的属性名。
+    
+    <jsp:useBean>动作用来在 JSP 页面中查找或创建一个 bean 实例。
+    属性：
+    id 属性用来唯一标识一个 bean 实例，该属性是必须的。
+    scope 属性指定 bean 实例的作用域。
+    class 属性指定创建 bean 实例的 Java 类。
+    Type 属性指定由 id 属性声明的变量的类型，由于该变量是在请求时只想实际的 bean 实例，其类型必须与 bean 类的类型相同或者是其超类，或者是一个 bean 类实现的接口。
+    
+    <jsp:setProperty>动作用来给 bean 实例的属性赋值。
+    属性：
+    name 属性用来标识一个 bean 实例，该实例必须是前面使用<jsp:useBean>动作声明的，并且 name 属性值必须与<jsp:useBean>动作中指定的一个 id 属性相同。property 属性指定要设置值的 bean 实例的属性，容器将根据指定的 bean 的属性调用适当的 setXxx ()，因此该属性也是必须的。
+    value 属性为 bean 的属性指定新值，该属性值可以接受请求时属性表达式。
+    param 属性指定请求参数名，如果请求中包含指定的参数，那么使用该参数值来设置 bean 的属性值。Value 和 param 都可选并且不能同时使用。
+    <jsp:getProperty>动作检索并向输出流中打印 bean 的属性值。
+    属性：name 属性指定 bean 实例名，property 属性指定要输出的属性名。
 
 14. MVC 设计模型中控制器是什么？模型是什么？视图是什么？MVC 设计模型的优点？
 
