@@ -1,4 +1,6 @@
-1. **简述请求转发和响应重定向的区别**？
+### 第一章
+
+1 . **简述请求转发和响应重定向的区别**？
    使用请求转发，在客户的浏览器地址栏中不会显示转发后的资源地址。使用响应重定向，在浏览器的地址栏中可以看到地址的变化。使用请求转发可以共享请求作用域中的数据，使用响应重定向可以共享会话作用域中的数据。
    
 2. 
@@ -66,7 +68,7 @@ RequestDispatcher rd =（9）request. __________  ("/welcome.jsp");
  9. getRequestDispatcher
  10. forward
      
-     
+### 第二章
 1. 有一个 URL 为 http://www.myserver.com/hello?userName=John ，问号 (?) 后面的内容称为<font color=" #ff0000 ">请求参数</font>
 2. 要使向服务器发送的数据不在浏览器的地址栏中显示，应该使用 <font color=" #ff0000 ">Post</font> 方法 
 3. `<jsp:include>` 标签可以在请求时把另一个 JSP 页面的结果包含到当前页面中
@@ -81,6 +83,7 @@ x与y的和是：＜%=x+y %＞
 1. 假设 myObj 是一个对象的引用，m1 () 是该对象上一个合法的方法。下面的 JSP 结构哪个是合法的？ `<%=myObj. m1 ()%>`
 
 
+### 第三章
 1. 什么时 MVC 设计模式？简述实现 MVC 涉及模式的一般步骤。
    MVC 组件分为模型（Model）、视图（View）和控制器（Controller），每种组件完成各自的任务。所有请求的目标都是 Servlet，它充当应用程序的控制器，Servlet 分析请求并将响应所需要的数据收集到 JavaBeans 对象，该对象作为应用程序的模型，最后 Servlet 控制器将请求转发到 JSP 页面。这些页面使用存储在 JavaBeans 中的数据产生响应，该对象作为应用程序的视图。该模型的最大优点是将业务逻辑和数据访问从表示层分离出来。JSP 页面不需要处理任何复杂的逻辑。节省开发的时间和费用，易于维护。
    实现 MVC 模式的一般步骤：
@@ -177,3 +180,9 @@ displayStudent.jsp ：从JavaBeans对象中收集学生信息，并在该页面
 **/
 
 ```
+
+### 第四章
+
+1. 调用哪个方法会使会话失效？`session.invalidate();`
+2. 下面通过哪个接口或类获取与用户相关的会话对象 <font color=" #ff0000 ">HttpServletRequest</font>
+3. 给定request 是一个HttpServletRequest对象，下面哪行代码会在不存在会话的情况下创建一个会话？
