@@ -367,57 +367,48 @@ x与y的和是：＜%=x+y %＞
 
 13. 在 JSP 中如何使用 JavaBeans？（<jsp:useBean> <jsp:setProperty> <jsp:getProperty>），这些动作包含哪些属性，代表什么含义？
     
-    <jsp:useBean>动作用来在 JSP 页面中查找或创建一个 bean 实例。
+    <jsp:<font color="#ff0000">useBean</font>>动作用来在 JSP 页面中查找或创建一个 bean 实例。
     属性：
-    id 属性用来唯一标识一个 bean 实例，该属性是必须的。
-    scope 属性指定 bean 实例的作用域。
-    class 属性指定创建 bean 实例的 Java 类。
-    Type 属性指定由 id 属性声明的变量的类型，由于该变量是在请求时只想实际的 bean 实例，其类型必须与 bean 类的类型相同或者是其超类，或者是一个 bean 类实现的接口。
+    <span style="background:#d3f8b6">id 属性</span>用来唯一标识一个 bean 实例，该属性是必须的。
+    <span style="background:#d3f8b6">scope 属性</span>指定 bean 实例的作用域。
+    <span style="background:#d3f8b6">class 属性</span>指定创建 bean 实例的 Java 类。
+    <span style="background:#d3f8b6">Type 属性</span>指定由 id 属性声明的变量的类型，由于该变量是在请求时只想实际的 bean 实例，其类型必须与 bean 类的类型相同或者是其超类，或者是一个 bean 类实现的接口。
     
-    <jsp:setProperty>动作用来给 bean 实例的属性赋值。
+    <jsp:<font color="#ff0000">setProperty</font>>动作用来给 bean 实例的属性赋值。
     属性：
-    name 属性用来标识一个 bean 实例，该实例必须是前面使用<jsp:useBean>动作声明的，并且 name 属性值必须与<jsp:useBean>动作中指定的一个 id 属性相同。property 属性指定要设置值的 bean 实例的属性，容器将根据指定的 bean 的属性调用适当的 setXxx ()，因此该属性也是必须的。
-    value 属性为 bean 的属性指定新值，该属性值可以接受请求时属性表达式。
-    param 属性指定请求参数名，如果请求中包含指定的参数，那么使用该参数值来设置 bean 的属性值。Value 和 param 都可选并且不能同时使用。
-    <jsp:getProperty>动作检索并向输出流中打印 bean 的属性值。
-    属性：name 属性指定 bean 实例名，property 属性指定要输出的属性名。
+    <span style="background:#d3f8b6">name 属性</span>用来标识一个 bean 实例，该实例必须是前面使用<jsp:useBean>动作声明的，并且 name 属性值必须与<jsp:useBean>动作中指定的一个 id 属性相同。<span style="background:#d3f8b6">property 属性</span>指定要设置值的 bean 实例的属性，容器将根据指定的 bean 的属性调用适当的 setXxx ()，因此该属性也是必须的。
+    <span style="background:#d3f8b6">value 属性</span>为 bean 的属性指定新值，该属性值可以接受请求时属性表达式。
+    <span style="background:#d3f8b6">param 属性</span>指定请求参数名，如果请求中包含指定的参数，那么使用该参数值来设置 bean 的属性值。
+    **Value 和 param 都可选并且不能同时使用**。
+    
+    <jsp:<font color="#ff0000">getProperty</font>>动作检索并向输出流中打印 bean 的属性值。
+    属性：
+    <span style="background:#d3f8b6">name 属性</span>指定 bean 实例名，<span style="background:#d3f8b6">property 属性</span>指定要输出的属性名。
 
 14. MVC 设计模型中控制器是什么？模型是什么？视图是什么？MVC 设计模型的优点？
+    
+    <span style="background:#d3f8b6">Servlet 实现控制器功能</span>，它从请求中读取请求信息、创建 JavaBeans 对象、执行业务逻辑、访问数据库等，最后将请求转发到视图组件。
+    <span style="background:#d3f8b6">JavaBeans 实现模型功能</span>，用于存放数据。
+    <span style="background:#d3f8b6">JSP 页面实现视图功能</span>。
+    最大优点是<font color="#ff0000">将业务逻辑和数据访问从表示层中分离出来</font>。<font color="#ff0000">提高系统的灵活性和复用性</font>。<font color="#ff0000">提高开发效率</font>。
 
-解：
+15. 实现 <font color="#ff0000">MVC 模式的一般步骤</font>是什么？
+    （1）定义 JavaBeans 表示数据
+    （2）使用 Servlet 处理请求
+    （3）填写 JavaBeans 对象数据
+    （4）结果的存储
+    （5）转发请求到 JSP 页面
+    （6）从 JavaBeans 对象中提取数据
 
-Servlet 实现控制器功能，它从请求中读取请求信息、创建 JavaBeans 对象、执行业务逻辑、访问数据库等，最后将请求转发到视图组件。
-
-JavaBeans 实现模型功能，用于存放数据。
-
-JSP 页面实现视图功能。
-
-最大优点是将业务逻辑和数据访问从表示层中分离出来。提高系统的灵活性和复用性。提高开发效率。
-
-15. 实现 MVC 模式的一般步骤是什么？
-
-解：
-
-（1）定义 JavaBeans 表示数据
-
-（2）使用 Servlet 处理请求
-
-（3）填写 JavaBeans 对象数据
-
-（4）结果的存储
-
-（5）转发请求到 JSP 页面
-
-（6）从 JavaBeans 对象中提取数据
-
-1. 什么时 MVC 设计模式？简述实现 MVC 涉及模式的一般步骤。
-   MVC 组件分为模型（Model）、视图（View）和控制器（Controller），每种组件完成各自的任务。所有请求的目标都是 Servlet，它充当应用程序的控制器，Servlet 分析请求并将响应所需要的数据收集到 JavaBeans 对象，该对象作为应用程序的模型，最后 Servlet 控制器将请求转发到 JSP 页面。这些页面使用存储在 JavaBeans 中的数据产生响应，该对象作为应用程序的视图。该模型的最大优点是将业务逻辑和数据访问从表示层分离出来。JSP 页面不需要处理任何复杂的逻辑。节省开发的时间和费用，易于维护。
+1. 什么是 MVC 设计模式？简述实现 MVC 涉及模式的一般步骤。
+   MVC 组件分为<font color="#ff0000">模型（Model）</font>、<font color="#ff0000">视图（View）</font>和<font color="#ff0000">控制器（Controller</font><font color="#ff0000">）</font>，每种组件完成各自的任务。所有请求的目标都是 Servlet，它充当应用程序的控制器，Servlet 分析请求并将响应所需要的数据收集到 JavaBeans 对象，该对象作为应用程序的模型，最后 Servlet 控制器将请求转发到 JSP 页面。这些页面使用存储在 JavaBeans 中的数据产生响应，该对象作为应用程序的视图。该模型的最大优点是将业务逻辑和数据访问从表示层分离出来。JSP 页面不需要处理任何复杂的逻辑。节省开发的时间和费用，易于维护。
    实现 MVC 模式的一般步骤：
-   （1）使用 Servlet 处理请求；
-   （3）填写 JavaBeans 对象数据；
-   （4）将结果存储在作用域对象中；
-   （5）将请求转发到 JSP 页面；
-   （6）最后在 JSP
+    （1）定义 JavaBeans 表示数据
+    （2）使用 Servlet 处理请求
+    （3）填写 JavaBeans 对象数据
+    （4）结果的存储
+    （5）转发请求到 JSP 页面
+    （6）从 JavaBeans 对象中提取数据
 2. 
 ```java
 请在横线处将程序补充完整。
@@ -509,6 +500,53 @@ displayStudent.jsp ：从JavaBeans对象中收集学生信息，并在该页面
 
 ### 第四章
 
+1. 什么是会话？
+   会话是<span style="background:#d3f8b6">一个客户与服务器之间的不间断的请求响应序列</span>
+
+2. 如何创建 HttpSession 对象？掌握 HttpSession 对象定义的 getSession（）方法和 setAttribute ()，getAttribute () 方法。
+   <font color="#ff0000">创建 HttpSession 对象</font>需要使用 HttpServletRequest 接口提供的 getSession（）
+   
+   该方法有两种格式：
+   (1) <font color="#ff0000">public Httpsession getsession (boolean create)</font> 返回或创建与当前请求关联的会话对象。如果没有与当前请求关联的会话对象，当参数为 true 时创建一个新的会话对象，当参数就为 false 时返回 null.
+   (2) <font color="#ff0000">public Httpsession getsession ()</font> 该方法与调用 getsession (true) 等价。
+
+3. 关闭浏览器是否就结束了会话？为何浏览器关闭后再发请求，服务器不再识别用户？
+   让 Session 结束生命周期，有以下两种办法：
+   
+   一个是 <font color="#ff0000">Session. invalidate () </font>方法，不过这个方法在实际的开发中，并不推荐，可能在强制注销用户的时候会使用；
+   一个是<font color="#ff0000">当前用户和服务器的交互时间超过默认时间</font>后，Session 会失效
+   
+   当<span style="background:#d3f8b6">把浏览器关闭时，浏览器并没有向服务器发送任何请求来关闭 Session</span>，自然 Session 也不会被销毁之前的 Session 一直都在服务器端，而当我们关闭浏览器时，此时的 Cookie 是存在于浏览器的进程中的，当浏览器关闭时，Cookie 也就不存在了。
+
+
+4. 如何让会话失效（2 个方法）? invalidate () 和在 DD 文件中设置会话超时时间。
+   **可以在 DD 文件中设置会话超时时间。
+	<  session-config >
+	< session-timeout > 10 </session-timeout >
+	< /session-config >
+
+5. 什么是 Cookie？如何构造 Cookie 对象？如何向客户端发送 Cookie ？如何从客户端读取 Cookie？
+   <font color="#ff0000">Cookie 是</font>客户访问 Web 服务器时，服务器在客户硬盘上存放的信息。
+   调用 Cookie 类的构造方法可以<font color="#ff0000">创建 Cookie 对象</font>   
+   Cookie userCookie=new Cookie (“username”,”hacker”)；
+   <span style="background:#d3f8b6">发送 Cookie 对象</span>需要调用响应对象的 addCookie（）将 Cookie 添加到 Set-Cookie 响应头：
+   Response. addCookie (userCookie);
+   <font color=" #ff0000 ">读取 Cookie</font>：
+   ①<span style="background:#d3f8b6">调用请求对象的 getCookie 方法</span>，该方法返回一个 Cookie 对象的数组，如果请求中不含 Cookie，返回 null 值。  Cookie[]cookie=request. getCookie ();
+   ②<span style="background:#d3f8b6">对 Cookie 数组循环</span>：有了 Cookie 对象数组后，就可以通过循环访问它的每个元素，然后调用每个 Cookie 的 getName (), 直到找到一个与希望的名称相同的对象为止。找到所需要的 Cookie 对象后，一般要调用它的 getValue ()，并根据得到的值做进一步处理
+
+6. 上传文件页面表单域有什么特殊要求？如何上传文件？如何从 Part 对象中检索上传文件的文件名？
+
+   客户端需要使用 form 表单，method 设为 post，enctype 默认为 application/x- www-form-urlencoded ，这里改为 multipart/form-data，把 input 标签的 type 属性设为 file。
+
+   用户选择文件提交表单后，服务器端就可以通过 JSP 的内置对象 request（实际上是 HttpServletRequest 的实例）的输入流获取用户表单内容。需要注意的是此输入流不仅包含了用户上传的文件，还包含了表单的其他字段信息，我们可以把此输入流存为临时文件，然后从临时文件中提取用户真正上传的文件。
+
+7. 文件下载需要完成哪些操作？如何下载文件？
+   <span style="background:#d3f8b6">在服务器端把文件转换成输出流，写入到 response</span>，以 response 把文件带到浏览器，由浏览器来提示用户是否愿意保存文件到本地
+
+
+#### 作业题
+
 1. 调用哪个方法会使会话失效？<font color=" #ff0000 ">session. invalidate ()</font>
    
 2. 下面通过哪个接口或类获取与用户相关的会话对象 <font color=" #ff0000 ">HttpServletRequest</font>
@@ -557,6 +595,61 @@ value=cookies[i].getValue();
    
 
 ### 第五章
+
+**1. 什么是 JDBC？JDBC 的基本功能是什么？**
+
+   <font color="#ff0000">JDBC</font>： Java 程序发访问数据库的标准，由一组 Java 语言编写的类和接口组成，这些类和接口称为 JDBC API，它为 Java 程序提供一种通用的数据访问接口。
+
+   <font color="#ff0000">基本功能包括</font>：建立与数据库的连接、发送 SQL 语句、处理数据库操作结果。
+
+**2. 语句对象有哪两种？有什么区别？（Statement 对象，PreparedStatement 对象），语句对象常用的方法有哪些？**
+
+   <font color="#ff0000">Statemetent 对象</font>执行的是静态 SQL 语句, 而 <font color="#ff0000">PreparedStatement 对象</font>执行的是预编译 SQL 语句
+
+**3. 结果集是什么？如何获得结果集？结果集常用方法有哪些？**
+
+   <font color="#ff0000">结果集</font>：表示 SELECT 语句查询得到的记录结合。
+
+   <font color="#ff0000">可滚动的结果集</font>指在结果集对象上可以前后移动指针访问结果集中的记录。
+
+   <font color="#ff0000">可更新的结果集</font>指直接通过结果集对象更新数据库表中数据。
+
+**4. 传统的数据库建立连接的步骤？该方法的缺点（建立连接比较耗费时间，导致增大请求的响应时间）**
+
+   传统数据库连接的一般步骤是：
+   <font color=" #ff0000 ">１</font>加载 JDBC 驱动程序
+   <font color=" #ff0000 ">２</font>建立连接对象
+   <font color=" #ff0000 ">3</font>创建语句对象<font color=" #ff0000 ">４</font>执行 SQL 语句得到结果集对象，调用 ResultSet 的有关方法就可以完成对数据库的操作
+
+   <font color=" #ff0000 ">5</font> 关闭建立的各种对象
+
+   缺点是每次访问数据库都要建立连接对象，请求结束需关闭连接对象。这将耗费大量的时间，可能导致增大请求的响应时间。
+
+**5. 使用数据源连接数据库的优点? 通过数据源对象如何获得连接对象？**
+
+解：
+
+使用数据源对象连接数据库，应用程序在启动时只需创建少量的连接对象即可。这样就不需要为每个 HTTP 请求都创建一个连接对象，这会大大降低请求的响应时间。
+
+采用 Java 命名与目录接口 （Java Naming and Directory Interface，JNDI）技术来获得 DataSource 对象的引用。首先为要创建的对象指定一个唯一的名字，然后由对象工厂创建对象，并将该对象与唯一的名字绑定，外部程序可以通过名字来获得某个对象的访问。
+
+**6. 什么是 DAO? 使用它有什么优点? 如何设计和使用 DAO 类？**
+
+解：
+
+DAO (Data Access Object) 数据访问对象是一个面向对象的数据库接口，它显露了 Microsoft Jet 数据库引擎（由 Microsoft Access 所使用），并允许 Visual Basic 开发者通过 ODBC 像直接连接到其他数据库一样，直接连接到 Access 表。
+
+优点：使用 DAO 技术可以使我们方便的访问 Microsoft Jet 引擎数据库
+
+1. 隔离了数据访问代码和业务逻辑代码
+
+2. 隔离了不同数据库实现
+
+一个典型的 Dao 模式有一下几部分组成：
+
+1. dao 接口：把对数据库的所有操作定义成抽象方法，可以实现多种实现
+
+2. Dao 实现类：针对不同数据库给出 Dao 接口定义方法的具体实现
 
 1. Statement 接口的 exeteQuery (String sql) 方法用来执行 SQL 的 <font color=" #ff0000 ">查询</font> 语句
    
