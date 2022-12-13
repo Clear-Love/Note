@@ -119,130 +119,87 @@ RequestDispatcher rd =（9）request. __________  ("/welcome.jsp");
    （4）<font color="#ff0000">Public Ma getParameterMaps ()</font>: 返回一个包含所有请求参数的 Map 对象，该对象以参数名作为键、以参数值作为值。键的类型为 String，值的类型为 String 数组。
 
 5. 如何实现请求转发？
-   需要通过请求对象的 getRequestDispatcher () 得到 RequestDispatcher 对象，该对象称为请求转发器对象，格式为 RequestDispatcher getRequestDispatcher（String path），然后通过 RequestDispatcher 接口中的 forward 方法（public void forward (ServletRequest request, ServletResponse response)）实现转发
+   需要通过请求对象的 getRequestDispatcher () <font color="#ff0000">得到 RequestDispatcher 对象</font>，该对象称为请求转发器对象，格式为 RequestDispatcher getRequestDispatcher（String path），然后通过 <font color="#ff0000">RequestDispatcher</font> 接口中的 <font color="#ff0000">forward</font> 方法（public void forward (ServletRequest request, ServletResponse response)）实现转发
 
 6. 如何使用请求对象存储数据？
+   ServletRequest 接口中的方法
+   （1）<font color="#ff0000">public void setAttribute (String name, Object obj)</font>: 将指定名称 name 的对象 obj 作为属性值存储到请求对象中
+   （2）<font color="#ff0000">public Object setAttribute (String name)</font>: 返回请求对象中存储的指定名称的属性值，如果指定名称的属性不存在，返回 null，使用该方法在必要时需要作类型转换。
+   （3）<font color="#ff0000">public Enumeration getAttribute name ()</font>: 返回一个 Enumeration 对象，它是请求对象中包含的所有属性名的枚举
+   （4）<font color="#ff0000">Public void removeAttribute (String name)</font>: 从请求对象中删除指定名称的属性
 
-解：
-
-ServletRequest 接口中的方法
-
-（1）public void setAttribute (String name, Object obj): 将指定名称 name 的对象 obj 作为属性值存储到请求对象中
-
-（2）public Object setAttribute (String name): 返回请求对象中存储的指定名称的属性值，如果指定名称的属性不存在，返回 null，使用该方法在必要时需要作类型转换。
-
-（3）public Enumeration getAttribute name (): 返回一个 Enumeration 对象，它是请求对象中包含的所有属性名的枚举
-
-（4）Public void removeAttribute (String name): 从请求对象中删除指定名称的属性
-
-7. SerevletResponse 如何向客户发送文本数据（调用 getWriter（）方法获得 Printwriter 对象）
-
-解：
+7. SerevletResponse 如何向客户发送文本数据（<font color="#ff0000">调用 getWriter（）方法获得 Printwriter 对象</font>）
 
 8. 如何设置响应的内容类型?
-
-解：
-
-使用响应对象的 setContentType (),
-
-例：response. setContentType (“text/html; charset=UTF-8”)
-
-设置响应头
-
-（1）public void setHeader (String name, String value): 将指定名称的响应头设置为指定的值
-
-（2）public void setIntHeader (String name, int value): 用给定的名称和整数值设置响应头
-
-（3）public void setDateHeader (String name, long date): 用给定的名称和日期值设置响应头
-
-（4）public void addHeader (String name, String value): 用给定的名称和值添加响应头
-
-（5）public void addIntHeader (String name, int value): 用给定的名称和整数值添加响应头
-
-（6）public void addDateHeader (String name, long date): 用给定的名称和日期值添加响应头
-
-（7）Public boolean containsHeader (String name): 返回是否已经设置指定的响应头
+   <span style="background: #d3f8b6 ">使用响应对象的 setContentType ()</span>,
+   
+   例：response. setContentType (“text/html; charset=UTF-8”)
+   设置响应头
+   （1）<font color=" #ff0000 ">public void setHeader</font> <font color=" #ff0000 ">(String name, String value)</font>: 将指定名称的响应头设置为指定的值
+   （2）<font color=" #ff0000 ">public void setIntHeader</font><font color=" #ff0000 "> (<font color=" #ff0000 ">S</font>tring name, int value)</font>: 用给定的名称和整数值设置响应头
+   （3）<font color=" #ff0000 ">public void setDateHeader</font><font color=" #ff0000 "> (String name, long date)</font>: 用给定的名称和日期值设置响应头
+   （4）<font color=" #ff0000 ">public void addHeader</font><font color=" #ff0000 "> (String name, String value)</font>: 用给定的名称和值添加响应头
+   （5）<font color=" #ff0000 ">public void addIntHeader</font> <font color=" #ff0000 ">(String name, int value)</font>: 用给定的名称和整数值添加响应头
+   （6）<font color=" #ff0000 ">public void addDateHeader </font><font color=" #ff0000 ">(String name, long date)</font>: 用给定的名称和日期值添加响应头
+   （7）<font color=" #ff0000 ">Public boolean containsHeader</font> <font color=" #ff0000 ">(String name)</font>: 返回是否已经设置指定的响应头
 
 9. 如何实现响应重定向？
-
-解：
-
-响应重定向是通过响应对象的 sendRedirect () 实现，格式为 public void sendRedirect (String location)
+   响应重定向是<span style="background:#d3f8b6">通过响应对象的 sendRedirect () 实现</span>，格式为 public void sendRedirect (String location)
 
 10. RequestDispatcher 的 forward 方法转发请求和使用 sendRedirect () 方法重定向请求有何不同？
-
-解：
-
-forward () 方法转发请求是服务器端控制权的转向，客户端地址栏中不显示转发后的资源地址。
-
-sendRedirect () 方法是服务器向浏览器发送 302 状态码，它使浏览器连接到新的位置，浏览器地址栏可看到地址的变化。使用重定向，资源不能位于 WEB-INF 目录中。
+    <font color="#ff0000">forward()</font> 方法转发请求是服务器端控制权的转向，客户端地址栏中不显示转发后的资源地址。
+    <font color="#ff0000">sendRedirect()</font> 方法是服务器向浏览器发送 302 状态码，它使浏览器连接到新的位置，浏览器地址栏可看到地址的变化。使用重定向，资源不能位于 WEB-INF 目录中。
 
 11. 部署描述文件的名称和作用是什么？`<servlet>` 元素包含哪些子元素？有什么含义？（尤其是 `<servlet-mapping>` 元素包含哪些子元素？
-
-解：
-
-Deployment Descripior DD，用来初始化 Web 应用程序的组件
-
-`<servlet>` 元素包含 `<servlet-name>` 元素, 该元素用来定义 Servlet 名称；`<servlet-class>` 元素, 该元素指定 Servlet 类的完整名称；`<init-param>` 元素, 该元素定义向 Servlet 传递的初始化参数；`<load-on-startup>` 元素，该元素指定是否在 Web 应用程序启动时载入该 Servlet。
-
-`<servlet-mapping>` 元素包含 `< servlet- name >` 和 `< url-pattern >`
+    <font color=" #ff0000 ">Deployment Descripior DD</font>，用来初始化 Web 应用程序的组件
+    
+    `<servlet>` 元素包含 `<servlet-name>` 元素, 该元素用来定义 Servlet 名称；`<servlet-class>` 元素, 该元素指定 Servlet 类的完整名称；`<init-param>` 元素, 该元素定义向 Servlet 传递的初始化参数；`<load-on-startup>` 元素，该元素指定是否在 Web 应用程序启动时载入该 Servlet。
+    
+    `<servlet-mapping>` 元素包含 `< servlet- name >` 和 `< url-pattern >`
 
 12. 请求 URL 的组成? 容器如何解析 URL?
-
-解：
-
-请求 URL 由协议与主机名、上下文路径、Servlet 路径、路径信息、查询串组成
-
-（1）当容器接收到该请求 URL 后，它首先解析出 URI。然后从中取出第一部分作为上下文路径，这里是/helloweb，接下来在容器中查找是否有名称为 helloweb 的 Web 应用程序
-
-（2）如果没有名为 helloweb 的 Web 应用程序，则上下文路径为空，请求将发送到默认的 Web 应用程序
-
-（3）如果有名为 helloweb 的应用程序，则继续解析下一部分。容器尝试将 Servlet 路径与 Servlet 映射匹配，如果找到一个匹配，则完整的 URI 请求就是 Servlet 路径，在这种情况下，路径信息为 null
-
-（4）容器沿着请求 URI 路径树向下，每次一层目录，使用“/”作为路径分隔符，反复尝试最长的路径，看是否与一个 Servlst 匹配。如果有一个匹配，请求 URI 的匹配部分就是 Servlet 路径，剩余的部分是路径信息
-
-（5）如果不能找到匹配的资源，容器将向客户发送一个 404 错误消息
+    请求 URL 由协议与主机名、上下文路径、Servlet 路径、路径信息、查询串组成
+    （1）当容器接收到该请求 URL 后，它<span style="background:#d3f8b6">首先解析出 URI</span>。<span style="background:#d3f8b6">然后从中取出第一部分作为上下文路径</span>，这里是/helloweb，<span style="background:#d3f8b6">接下来在容器中查找是否有名称为 helloweb 的 Web 应用程序</span>
+    （2）如果<font color="#ff0000">没有</font>名为 helloweb 的 Web 应用程序，则上下文路径为空，<span style="background:#d3f8b6">请求将发送到默认的 Web 应用程序</span>
+    （3）如果<font color="#ff0000">有</font>名为 helloweb 的应用程序，则<span style="background:#d3f8b6">继续解析下一部分</span>。容器<span style="background:#d3f8b6">尝试将 Servlet 路径与 Servlet 映射匹配</span>，如果找到一个匹配，则完整的 URI 请求就是 Servlet 路径，在这种情况下，路径信息为 null
+    （4）<span style="background:#d3f8b6">容器沿着请求 URI 路径树向下</span>，每次一层目录，使用“/”作为路径分隔符，反复尝试最长的路径，看是否与一个 Servlst 匹配。<font color="#ff0000">如果有一个匹配</font>，请求 URI 的匹配部分就是 Servlet 路径，剩余的部分是路径信息
+    （5）<font color="#ff0000">如果不能找到匹配的资源</font>，容器将向客户发送一个 404 错误消息
 
 13. @WebServlet 和@WebInitParam 注解的用法。
+    <font color=" #ff0000 ">@WebServlet</font>是用来配置 servlet 的属性的，<font color=" #ff0000 ">@WebInitParam</font>是用来配置一些初始化属性的。
+    @WebServlet (  
+    name = "WebInitParamExample", urlPatterns = {"/hello"}  
+    , initParams = {  
+    @WebInitParam (name= "Site : ", value=" http://roseindia.net" ),  
+    @WebInitParam (name= "Rose", value= "India"),  
+    }  
+    )
 
 14. 什么是 ServletConfig 对象？如何获得该对象？该对象定义哪些方法？（尤其是 getInitParameter（）方法）
+    在 Servlet 初始化时，容器将调用 init（ServletConfig），并为其传递一个 ServletConfig 对象，该对象称为 Servlet 配置对象
+    （1）<span style="background:#d3f8b6">覆盖 Servlet 的 init（ServletConfig config），然后把容器创建的 ServletConfig 对象保存到一个成员变量中</span>，
+    如：ServletConfig config = null;
+    Public void init (ServletConfig config) {
+        super. init (config);
+        this. config = config;
+    }
+    （2）<span style="background:#d3f8b6">在 Servlet 中直接使用 getServletConfig () 获得 ServletConfig 对象</span>，如：ServletConfig config=getServletConfig ()
+    
+    <span style="background: #d3f8b6 ">ServletConfig 接口定义 4 个方式</span>：
+    （1）<font color="#ff0000">public String getInitParameter（String name）</font>：返回指定名称的初始化参数值。若该参数不存在，则返回 null。初始化参数是在 Servlet 初始化时容器从 DD 文件中取出，然后把它包装到 ServletConfig 对象中
+    （2）<font color="#ff0000">Public Enumeration getInitParameterNames（）</font>：返回一个包含所有初始化参数名的 Enumeration 对象，若 Servlet 没有初始化参数，则返回一个空的 Enumeration 对象
+    （3）<font color="#ff0000">public String getServletName（）</font>：返回在 DD 文件中＜servlet-name＞元素指定的 Servlet 名称
+    （4）<font color="#ff0000">public ServletContext getServletContext ()</font>: 返回该 Servlet 所在的上下文对象在部署描述文件中和注解中如何设置 Servlet 初始化参数。
 
-解：
-
-在 Servlet 初始化时，容器将调用 init（ServletConfig），并为其传递一个 ServletConfig 对象，该对象称为 Servlet 配置对象
-
-（1）覆盖 Servlet 的 init（ServletConfig config），然后把容器创建的 ServletConfig 对象保存到一个成员变量中，如：ServletConfig config = null;
-
-Public void init (ServletConfig config) {
-
-      super.init(config);
-
-this. config = config;
-
-}
-
-（2）在 Servlet 中直接使用 getServletConfig () 获得 ServletConfig 对象，如：ServletConfig config=getServletConfig ()
-
-ServletConfig 接口定义 4 个方式：
-
-（1）public String getInitParameter（String name）：返回指定名称的初始化参数值。若该参数不存在，则返回 null。初始化参数是在 Servlet 初始化时容器从 DD 文件中取出，然后把它包装到 ServletConfig 对象中
-
-（2）Public Enumeration getInitParameterNames（）：返回一个包含所有初始化参数名的 Enumeration 对象，若 Servlet 没有初始化参数，则返回一个空的 Enumeration 对象
-
-（3）public String getServletName（）：返回在 DD 文件中＜servlet-name＞元素指定的 Servlet 名称
-
-（4）public ServletContext getServletContext (): 返回该 Servlet 所在的上下文对象在部署描述文件中和注解中如何设置 Servlet 初始化参数。
-
-15. 什么是 ServletContext 对象？如何获得该对象？掌握该对象定义的 getInitParameter（）方法，Servlet 上下文对象的的 RequestDispatcher 方法和 setAttribute ()，getAttribute () 方法的作用。
-
-解：
-
-Web 容器在启动时会加载每个 web 应用程序·并为每个 Web 应用程序创建一个唯一的 ServletContext 对象, 该对象一般称为 Servlet 上下文对象。
+15. 什么是 ServletContext 对象？如何获得该对象？
+    掌握该对象定义的 getInitParameter（）方法，Servlet 上下文对象的的 RequestDispatcher 方法和 setAttribute ()，getAttribute () 方法的作用。
+    
+    ServletContext对象可以<span style="background:#d3f8b6">通过`ServletConfig.getServletContext()`方法</span>获得对ServletContext对象的引用，也可以<span style="background:#d3f8b6">通过`this.getServletContext()`方法</span>获得其对象的引用
+    Web 容器在启动时会加载每个 web 应用程序·并为每个 Web 应用程序创建一个唯一的 ServletContext 对象, 该对象一般称为 <font color="#ff0000">Servlet 上下文对象</font>。
 
 16. 在 DD 文件中如何声明应用程序的初始化参数？
-
-解：
-
+    
+```java
 <init-param>
 
 <param-name>name</param-name>
@@ -250,6 +207,7 @@ Web 容器在启动时会加载每个 web 应用程序·并为每个 Web 应用�
 <param-value>value</param-value>
 
 </init-param>
+```
 
 17. 使用 ServletContext 对象存储数据，与使用请求对象存储数据有什么区别？
 
