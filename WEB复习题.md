@@ -78,7 +78,7 @@ RequestDispatcher rd =（9）request. __________  ("/welcome.jsp");
 <%! int y=6; %＞  
 x与y的和是：＜%=x+y %＞
 ```
-1. 假设 myObj 是一个对象的引用，m1 () 是该对象上一个合法的方法。下面的 JSP 结构哪个是合法的？ <font color=" #ff0000 "><%=myObj. m1 ()%></font>
+1. 假设 myObj 是一个对象的引用，m1 () 是该对象上一个合法的方法。下面的 JSP 结构哪个是合法的？ `<%=myObj. m1 ()%>`
 
 
 1. 什么时 MVC 设计模式？简述实现 MVC 涉及模式的一般步骤。
@@ -89,6 +89,91 @@ x与y的和是：＜%=x+y %＞
    （4）将结果存储在作用域对象中；
    （5）将请求转发到 JSP 页面；
    （6）最后在 JSP
-   
+2. 
+```java
+请在横线处将程序补充完整。
+
+queryStudent.jsp :在该页面输入学生学号，点击“确定”按钮，页面跳转到querystudent.do对应的servlet程序。学生学号要保密，不能在浏览器地址栏显示出来。
+
+＜%@page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%＞
+
+＜html＞ 
+
+＜head＞
+
+＜title＞ 学生查询 
+
+＜/title＞ 
+
+＜/head＞
+
+＜body＞
+
+＜formaction="①querystudent.do"method="② post "＞    
+
+学号：  ＜inputtype="text"name="studentID"size="15"＞ 
+
+姓名：  ＜inputtype="text"name=" studentName "size="10"＞ 
+
+＜inputtype=③" submit"    value="确定"＞
+
+＜/form＞
+
+＜/body＞ 
+
+＜/body＞ 
+
+＜/html＞
+
+在 querystudent.do对应的servlet程序中，把queryStudent.jsp页面中填写的学生信息存放在名为student的JavaBeans对象中，并把该对象作为属性存储在请求作用域，然后请求转发到 displayStudent.jsp 。 
+
+displayStudent.jsp ：从JavaBeans对象中收集学生信息，并在该页面中显示出来。 
+
+＜%@pagecontentType="text/html;charset=utf-8"%＞
+
+＜jsp:useBeanid="student"type="com.demo.Student"scope=" ④request  "/＞
+
+＜html＞ 
+
+＜head＞ ＜title＞ 学生信息 ＜/title＞ ＜/head＞
+
+＜body＞
+
+学号：＜jsp:⑤getProperty  name="student"property="stu_id"/＞ ＜br＞
+
+姓名：＜jsp:getPropertyname="student"property="stu_name"/＞
+
+＜/body＞
+
+＜/html＞
 ```
+
+```java
+下面代码存在三处错误，请找出错误并改正。
+
+1行＜%@PagecontentType="text/html;charset=UTF-8"%＞
+
+2行＜html＞＜body＞
+
+3行＜%!floatnumber=0%＞
+
+4行＜%number=number+1;%＞
+
+5行number的值:＜%=number;%＞次。
+
+6行＜/body＞＜/html＞
+
+错误1位于第（）行，改正（）
+
+错误2位于第（）行，改正（）
+
+错误3位于第（）行，改正（）
+/**
+1行  改为page小写p
+
+3行  改为＜%!floatnumber=0;%＞，要带分号。
+
+5行   改为＜%=number%＞，表达式要去掉分号。
+**/
+
 ```
