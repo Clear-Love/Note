@@ -98,7 +98,9 @@ RequestDispatcher rd =（9）request. __________  ("/welcome.jsp");
  8. getParameter
  9. getRequestDispatcher
  10. forward
-     
+
+
+
 ### 第二章
 
 1. 什么是 Servlet 的生命周期？Servlet 的生命周期包括哪几个阶段？
@@ -596,17 +598,17 @@ value=cookies[i].getValue();
 
 ### 第五章
 
-**1. 什么是 JDBC？JDBC 的基本功能是什么？**
+1. 什么是 JDBC？JDBC 的基本功能是什么？
 
    <font color="#ff0000">JDBC</font>： Java 程序发访问数据库的标准，由一组 Java 语言编写的类和接口组成，这些类和接口称为 JDBC API，它为 Java 程序提供一种通用的数据访问接口。
 
    <font color="#ff0000">基本功能包括</font>：建立与数据库的连接、发送 SQL 语句、处理数据库操作结果。
 
-**2. 语句对象有哪两种？有什么区别？（Statement 对象，PreparedStatement 对象），语句对象常用的方法有哪些？**
+2. 语句对象有哪两种？有什么区别？（Statement 对象，PreparedStatement 对象），语句对象常用的方法有哪些？
 
    <font color="#ff0000">Statemetent 对象</font>执行的是静态 SQL 语句, 而 <font color="#ff0000">PreparedStatement 对象</font>执行的是预编译 SQL 语句
 
-**3. 结果集是什么？如何获得结果集？结果集常用方法有哪些？**
+3. 结果集是什么？如何获得结果集？结果集常用方法有哪些？
 
    <font color="#ff0000">结果集</font>：表示 SELECT 语句查询得到的记录结合。
 
@@ -614,32 +616,31 @@ value=cookies[i].getValue();
 
    <font color="#ff0000">可更新的结果集</font>指直接通过结果集对象更新数据库表中数据。
 
-**4. 传统的数据库建立连接的步骤？该方法的缺点（建立连接比较耗费时间，导致增大请求的响应时间）**
+4. 传统的数据库建立连接的步骤？该方法的缺点（建立连接比较耗费时间，导致增大请求的响应时间）
 
    传统数据库连接的一般步骤是：
-   <font color=" #ff0000 ">１</font>加载 JDBC 驱动程序
-   <font color=" #ff0000 ">２</font>建立连接对象
-   <font color=" #ff0000 ">3</font>创建语句对象<font color=" #ff0000 ">４</font>执行 SQL 语句得到结果集对象，调用 ResultSet 的有关方法就可以完成对数据库的操作
-
+   <font color=" #ff0000 ">1</font> 加载 JDBC 驱动程序
+   <font color=" #ff0000 ">2</font> 建立连接对象
+   <font color=" #ff0000 ">3</font> 创建语句对象
+   <font color=" #ff0000 ">4</font> 执行 SQL 语句得到结果集对象，调用 ResultSet 的有关方法就可以完成对数据库的操作
    <font color=" #ff0000 ">5</font> 关闭建立的各种对象
 
-   缺点是每次访问数据库都要建立连接对象，请求结束需关闭连接对象。这将耗费大量的时间，可能导致增大请求的响应时间。
+   <font color="#ff0000">缺点</font>是每次访问数据库都要建立连接对象，请求结束需关闭连接对象。这将耗费大量的时间，可能导致增大请求的响应时间。
 
-**5. 使用数据源连接数据库的优点? 通过数据源对象如何获得连接对象？**
+5. 使用数据源连接数据库的优点? 通过数据源对象如何获得连接对象？**
 
-解：
+   <span style="background:#d3f8b6">使用数据源对象连接数据库，应用程序在启动时只需创建少量的连接对象即可</span>。这样就不需要为每个 HTTP 请求都创建一个连接对象，这会大大降低请求的响应时间。
 
-使用数据源对象连接数据库，应用程序在启动时只需创建少量的连接对象即可。这样就不需要为每个 HTTP 请求都创建一个连接对象，这会大大降低请求的响应时间。
+   采用 Java 命名与目录接口 （Java Naming and Directory Interface，JNDI）技术来获得 DataSource 对象的引用。<font color="#ff0000">首先</font>为要创建的对象指定一个唯一的名字，<font color="#ff0000">然后</font>由对象工厂创建对象，并将该对象与唯一的名字绑定，外部程序可以通过名字来获得某个对象的访问。
 
-采用 Java 命名与目录接口 （Java Naming and Directory Interface，JNDI）技术来获得 DataSource 对象的引用。首先为要创建的对象指定一个唯一的名字，然后由对象工厂创建对象，并将该对象与唯一的名字绑定，外部程序可以通过名字来获得某个对象的访问。
+6. 什么是 DAO? 使用它有什么优点? 如何设计和使用 DAO 类？**
 
-**6. 什么是 DAO? 使用它有什么优点? 如何设计和使用 DAO 类？**
-
-解：
-
-DAO (Data Access Object) 数据访问对象是一个面向对象的数据库接口，它显露了 Microsoft Jet 数据库引擎（由 Microsoft Access 所使用），并允许 Visual Basic 开发者通过 ODBC 像直接连接到其他数据库一样，直接连接到 Access 表。
-
-优点：使用 DAO 技术可以使我们方便的访问 Microsoft Jet 引擎数据库
+   <font color="#ff0000">DAO (Data Access Object)</font> 数据访问对象是一个面向对象的数据库接口，它显露了 Microsoft Jet 数据库引擎（由 Microsoft Access 所使用），并允许 Visual Basic 开发者通过 ODBC 像直接连接到其他数据库一样，直接连接到 Access 表。
+   
+   <font color="#ff0000">优点</font>：使用 DAO 技术可以使我们方便的访问 Microsoft Jet 引擎数据库
+   
+   
+#### 作业题
 
 1. 隔离了数据访问代码和业务逻辑代码
 
@@ -727,6 +728,23 @@ conn.close();
 
 
 ### 第六章
+
+1. 如何调用表达式语言？
+   ：<font color=" #ff0000 ">${expression}</font>
+
+2. 使用 EL 表达式如何访问作用域变量？
+   ：<font color="#ff0000">${userName}</font>
+
+3. 用 EL 表达式如何访问 JavaBeans 和集合对象？
+   ：<font color=" #ff0000 ">${name. class}</font>
+
+4. EL 的隐含变量的使用？
+   例如访问 Accept 请求头，可使用 <font color="#ff0000">header 隐含变量</font>
+   `${header.Accept}` 或$ `{header[“Accept”]}`
+
+5. 在 EL 中都可以访问哪些类型的数据？ 
+   某个 <font color="#ff0000">web 域中的对象</font>，访问 <font color="#ff0000">javabean 的属性</font>、访问 <font color="#ff0000">list</font>, <font color="#ff0000">map 集合</font>、访问<font color="#ff0000">数组</font>
+
 
 1. EL 表达式语言可用于在网页上生成动态的内容并代替 JSP 元素，EL 表达式语言的语法是 <font color=" #ff0000 ">${ELexpression}</font>
    
