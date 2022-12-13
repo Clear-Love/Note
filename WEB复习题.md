@@ -30,6 +30,7 @@
 
 
 #### 作业题
+
 1 . **简述请求转发和响应重定向的区别**？
    使用请求转发，在客户的浏览器地址栏中不会显示转发后的资源地址。使用响应重定向，在浏览器的地址栏中可以看到地址的变化。使用请求转发可以共享请求作用域中的数据，使用响应重定向可以共享会话作用域中的数据。
    
@@ -196,7 +197,10 @@ RequestDispatcher rd =（9）request. __________  ("/welcome.jsp");
     
     ServletContext对象可以<span style="background:#d3f8b6">通过`ServletConfig.getServletContext()`方法</span>获得对ServletContext对象的引用，也可以<span style="background:#d3f8b6">通过`this.getServletContext()`方法</span>获得其对象的引用
     Web 容器在启动时会加载每个 web 应用程序·并为每个 Web 应用程序创建一个唯一的 ServletContext 对象, 该对象一般称为 <font color="#ff0000">Servlet 上下文对象</font>。
-
+    (1) public void setAttribute (String name, Object object): 将给定名称的属性派对象绑定到上下文对象上。
+    (2) public Object getAttribute (String name): 返回绑定到上下文对象上的给定名称的属性值，如果没有该属性，则返回 null.
+    (3) public Enumeration getAttributeNames (): 返回绑定到上下文对象上的所有属性名 Enumeration 对象.
+    (4) public void removeAttribute (String name): 从上下文对象中删除指定名称的属性。
 16. 在 DD 文件中如何声明应用程序的初始化参数？
     
 ```java
@@ -210,32 +214,14 @@ RequestDispatcher rd =（9）request. __________  ("/welcome.jsp");
 ```
 
 17. 使用 ServletContext 对象存储数据，与使用请求对象存储数据有什么区别？
-
-解：
-
-(1) public void setAttribute (String name, Object object): 将给定名称的属性派对象绑
-
-定到上下文对象上。
-
-(2) public Object getAttribute (String name): 返回绑定到上下文对象上的给定名称的属
-
-性值，如果没有该属性，则返回 null.
-
-(3) public Enumeration getAttributeNames (): 返回绑定到上下文对象上的所有属性名
-
-) Enumeration 对象.
-
-(4) public void removeAttribute (String name): 从上下文对象中删除指定名称的属性。
+    由于一个WEB应用中的所有Servlet共享同一个ServletContext对象，因此Servlet对象之间可以通过ServletContext对象来实现通讯。ServletContext对象通常也被称之为context域对象
 
 18. Servlet 上下文初始化参数和 Servlet 初始化参数有什么区别？
-
-解：
-
-1. Servlet 上下文初始化参数与 Servlet 初始化参数类似，区别是 Servlet 上下文初始化参数对整个 web 应用而 Servlet 初始化参数只对应一个 servlet
-
-2. Servlet 上下文初始化参数在 servlet 中直接调用 getServletContext (). getInitParameter ()
-
-3. Servlet 初始化参数定义在 web. xml 中的一个 servlet 元素中，通过 ServletConfig 接口的 getInitParameter (java. lang. String name) 方法。
+    1. Servlet 上下文初始化参数与 Servlet 初始化参数类似，区别是 <span style="background:#d3f8b6">Servlet 上下文初始化参数对整个 web 应用而 Servlet 初始化参数只对应一个 servlet</span>
+    2. Servlet 上下文初始化参数在 servlet 中直接调用 getServletContext (). getInitParameter ()
+    3. Servlet 初始化参数定义在 web. xml 中的一个 servlet 元素中，通过 ServletConfig 接口的 getInitParameter (java. lang. String name) 方法。
+       
+#### 作业题
 
 1. 有一个 URL 为 http://www.myserver.com/hello?userName=John ，问号 (?) 后面的内容称为<font color=" #ff0000 ">请求参数</font>
 2. 要使向服务器发送的数据不在浏览器的地址栏中显示，应该使用 <font color=" #ff0000 ">Post</font> 方法 
@@ -252,6 +238,254 @@ x与y的和是：＜%=x+y %＞
 
 
 ### 第三章
+
+1. 在 JSP 页面包含哪些元素？哪三种是 JSP 脚本元素？如何使用他们？
+   脚本元素：声明、小脚本和表达式。
+   <font color="#ff0000">JSP 声明</font>：<%! Int count = 0; %>
+   <font color="#ff0000">JSP 小脚本</font>：<% count++; %>
+   <font color="#ff0000">JSP 表达式</font>：<% = count;%>
+
+2. 在 JSP 页面包含哪些指令（<span style="background:#d3f8b6">page 指令、include 指令和 taglib 指令</span>）？在 JSP 页面包含哪些动作，如何使用？
+   （下面几种动作必须掌握:
+   <font color=" #ff0000 ">jsp: include</font> 在页面被请求的时候引入一个文件
+   <font color=" #ff0000 ">jsp: forward </font>把请求转到一个新的页面。
+  <font color="#ff0000"> jsp: useBean</font> 查找或创建一个 JavaBeans 对象。
+   <font color="#ff0000">jsp: setProperty </font>设置 JavaBeans 对象的属性值。
+   <font color="#ff0000">jsp: getProperty</font> 返回 JavaBeans 对象的属性值。）
+
+3. 简述 JSP 页面生命周期？
+   (1) <font color="#ff0000">页面转换</font>：对页面解析并创建一个包含对应 Servlet 的 Java 源文件
+   (2) <font color="#ff0000">页面编译</font>：对 Java 源文件编译
+   (3) <font color="#ff0000">加载类</font>：将编译后的类加载到容器中
+   (4) <font color="#ff0000">创建实例</font>：创建一个 Servlet 实例
+   (5) <font color="#ff0000">调用 jspInit ()</font>：调用其他方法之前调用该方法初始化
+   (6) <font color="#ff0000">调用_jspService ()</font>：对每个请求调用一次该方法
+   (7) <font color="#ff0000">调用 jspDestroy ()</font>：当 Servlet 容器决定停止 Servlet 服务时调用该方法
+
+4. JSP 生命周期方法有哪些？各起什么作用？
+   <font color="#ff0000">_jspInit ()</font>：初始化 Servlet 实例。
+   <font color="#ff0000">jspService ()</font>：每次请求调用一次，实现交互行为。
+   <font color="#ff0000">jspDestroy ()</font>：清理 jspInit () 获得的资源。
+
+5. 如何将 JSP 页面中的元素转换成 Servlet 代码（转换规则是什么？）？JSP 声明中定义的变量和小脚本中定义的变量有何不同？
+   (1) 所有的 <font color="#ff0000">JSP 声明</font>都转换成页面实现类的成员，它们被原样复制。
+   
+   (2) 所有的 <font color="#ff0000">JSP 小脚本</font>都转换成页面实现类的_jspService () 的一部分，它们也被原样复制。小脚本中声明的标量转换成_jspService () 的局部变量，语句转换成_jspService () 中的语句。
+   
+   (3) 所有的 <font color="#ff0000">JSP 表达式</font>都转化成_jspService () 的一部分，表达式的值使用 out. print () 语句输出。
+
+   (4) 有些<font color="#ff0000">指令</font>在转换阶段产生 Java 代码，例如，page 指令的 import 属性转换成页面实现类的 import 语句。
+
+   (5) 所有的 <font color="#ff0000">JSP 动作</font>都通过调用针对厂商的类来替换。
+
+   (6) 所有<font color="#ff0000">表达式语言 EL </font>通过计算后使用 out. write () 语句输出。
+
+   (7) 所有<font color="#ff0000">模板文本</font>都成为_jspService () 的一部分，模板内容是由 out. write () 语句输出。
+
+   (8) 所有<font color="#ff0000"> JSP 注释</font>都被忽略。
+
+6. 什么是请求时属性表达式？
+   在<span style="background:#d3f8b6">请求时计算 JSP 表达式的值，传递给动作</span>，这个表达式被称为请求时属性表达式。
+   例如：
+   <%! String pageURL = “copyright. jsp”%>
+   <jsp:include page = “<% = pageURL%>”/>
+
+7. JSP 隐含变量有哪些？各代表什么含义？
+   <font color="#ff0000">request</font> HttpServletRequest 类的实例，引用页面的当前请求对象。
+
+   <font color="#ff0000">response</font> HttpServletResponse 类的实例，用来向客户发送一个响应。
+
+   <font color="#ff0000">out</font> PrintWriter 类的实例，引用页面输出流，用于把结果输出至网页上。
+
+  <font color="#ff0000"> session</font> HttpSession 类的实例，引用用户对话。
+
+   <font color="#ff0000">application</font> ServletContext 类的实例，引用 Web 应用程序上下文。
+
+   <font color="#ff0000">config</font> ServletConfig 类的实例，引用 Servlet 的配置对象
+
+   <font color="#ff0000">pageContext</font> PageContext 类的实例，引用页面上下文，提供对 JSP 页面所有对象以及命名空间的访问
+
+   <font color="#ff0000">page</font> 引用页面的 Servlet 实例
+
+   <font color="#ff0000">exception</font> Exception 类的对象，代表发生错误的 JSP 页面中对应的异常对象
+
+8. page 指令的常用属性（<span style="background:#d3f8b6">import, contentType, pageEncoding, session, errorPage, isErrorPage</span>）
+
+9. 什么是静态包含？如何用 include 指令实现？什么是动态包含？如何用 jsp：include 动作实现？他们之间有什么区别？
+   静态包含是在 JSP 页面转换阶段将另一个文件的内容包含在当前 JSP 页面中。
+   `<%@ include file = “relativeURL”%>`
+   
+   动态包含是在请求时将另一个页面的输出包含到主页面的输出中。
+   <jsp: include page=”relativeURL” flush=”true|false”>
+
+区别：
+
+1. 静态导入是将导入页面的代码完全融入，两个页面融合成一个整体 Servlet；而动态 include 是在 Servlet 中使用 include 方法来引入被导入语页面的内容。
+
+2. 静态导入时页面的编译指令会起作用；而动态导入时被导入页面的编译指令则失去作用，只是插入被导入页面的 body 内容
+
+3. 最直观的区别就是动态包含可以增加额外的参数
+
+10. 在 JSP 页面实现请求转发的三种方法？
+
+解：
+
+1）<%
+
+      RequestDispatcher view = request.getRequestDispatcher("other.jsp");
+
+      view.forward(request, response);
+
+%>
+
+2）<%
+
+          pageContext.forward("other.jsp");
+
+%>
+
+3）`<jsp:forward page="other.jsp" />`
+
+11. JSP 的作用域对象有哪些？它们的作用域范围是什么？如何在这些对象上设置和获得属性？
+
+解：
+
+作用域名
+
+对应的对象
+
+存在性和可访问性
+
+应用作用域
+
+application
+
+整个 Web 应用程序有效
+
+会话作用域
+
+session
+
+一个用户对话范围内有效
+
+请求作用域
+
+request
+
+在用户的请求和转发的请求内有效
+
+页面作用域
+
+pageContext
+
+只在当前的页面内有效
+
+应用作用域：
+
+设置属性：ServletContext context = getServletContext ();
+
+              Context.setAttribute(“foo”,one);
+
+获得属性：<% = application. getAttribute (“foo”); %>
+
+会话作用域：
+
+HttpSession session = request. getSession (true);
+
+设置属性：session. setAttribute (“name”, value);
+
+获得属性：session. getAttribute (“name”);
+
+请求作用域：
+
+设置属性：request. setAttribute (“name”, value);
+
+获得属性：request. getAttribute (“name”);
+
+页面作用域：
+
+设置属性：<% pageContext. setAttribute (“name”, value);%>
+
+获得属性：<% pageContext. getAttribute (“name”);%>
+
+12. 什么是 JavaBeans？要遵循的规范是什么？
+
+解：
+
+JavaBeans 是 Java 平台的组件技术，在 JavaWeb 开发中常用 JavaBeans 来存放数据、封装业务逻辑等，从而很好地实现业务逻辑和表示逻辑的分离，是系统具有更好的健壮性和灵活性。
+
+规范：
+
+（1）JavaBeans 应该是 public 类，并且具有无参数的 public 构造方法，通过定义不带参数的构造方法或使用默认的构造方法均可满足这个要求。
+
+（2）JavaBeans 类的成员变量一般称为属性。对应每个属性访问权限一般定义为 private。
+
+（3）每个属性通常定义两个 public 方法，一个是访问方法（getter），另一个是修改方法（setter）使用它们访问和修改 JavaBeans 的属性值。
+
+13. 在 JSP 中如何使用 JavaBeans？（<jsp:useBean> <jsp:setProperty> <jsp:getProperty>），这些动作包含哪些属性，代表什么含义？
+
+解：
+
+<jsp:useBean>动作用来在 JSP 页面中查找或创建一个 bean 实例。
+
+属性：
+
+id 属性用来唯一标识一个 bean 实例，该属性是必须的。
+
+scope 属性指定 bean 实例的作用域。
+
+class 属性指定创建 bean 实例的 Java 类。
+
+Type 属性指定由 id 属性声明的变量的类型，由于该变量是在请求时只想实际的 bean 实例，其类型必须与 bean 类的类型相同或者是其超类，或者是一个 bean 类实现的接口。
+
+<jsp:setProperty>动作用来给 bean 实例的属性赋值。
+
+属性：
+
+name 属性用来标识一个 bean 实例，该实例必须是前面使用<jsp:useBean>动作声明的，并且 name 属性值必须与<jsp:useBean>动作中指定的一个 id 属性相同。
+
+property 属性指定要设置值的 bean 实例的属性，容器将根据指定的 bean 的属性调用适当的 setXxx ()，因此该属性也是必须的。
+
+value 属性为 bean 的属性指定新值，该属性值可以接受请求时属性表达式。
+
+param 属性指定请求参数名，如果请求中包含指定的参数，那么使用该参数值来设置 bean 的属性值。
+
+Value 和 param 都可选并且不能同时使用。
+
+<jsp:getProperty>动作检索并向输出流中打印 bean 的属性值。
+
+属性：
+
+name 属性指定 bean 实例名，property 属性指定要输出的属性名。
+
+14. MVC 设计模型中控制器是什么？模型是什么？视图是什么？MVC 设计模型的优点？
+
+解：
+
+Servlet 实现控制器功能，它从请求中读取请求信息、创建 JavaBeans 对象、执行业务逻辑、访问数据库等，最后将请求转发到视图组件。
+
+JavaBeans 实现模型功能，用于存放数据。
+
+JSP 页面实现视图功能。
+
+最大优点是将业务逻辑和数据访问从表示层中分离出来。提高系统的灵活性和复用性。提高开发效率。
+
+15. 实现 MVC 模式的一般步骤是什么？
+
+解：
+
+（1）定义 JavaBeans 表示数据
+
+（2）使用 Servlet 处理请求
+
+（3）填写 JavaBeans 对象数据
+
+（4）结果的存储
+
+（5）转发请求到 JSP 页面
+
+（6）从 JavaBeans 对象中提取数据
+
 1. 什么时 MVC 设计模式？简述实现 MVC 涉及模式的一般步骤。
    MVC 组件分为模型（Model）、视图（View）和控制器（Controller），每种组件完成各自的任务。所有请求的目标都是 Servlet，它充当应用程序的控制器，Servlet 分析请求并将响应所需要的数据收集到 JavaBeans 对象，该对象作为应用程序的模型，最后 Servlet 控制器将请求转发到 JSP 页面。这些页面使用存储在 JavaBeans 中的数据产生响应，该对象作为应用程序的视图。该模型的最大优点是将业务逻辑和数据访问从表示层分离出来。JSP 页面不需要处理任何复杂的逻辑。节省开发的时间和费用，易于维护。
    实现 MVC 模式的一般步骤：
