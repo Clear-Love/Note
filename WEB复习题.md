@@ -34,9 +34,8 @@
 1 . **简述请求转发和响应重定向的区别**？
    使用请求转发，在客户的浏览器地址栏中不会显示转发后的资源地址。使用响应重定向，在浏览器的地址栏中可以看到地址的变化。使用请求转发可以共享请求作用域中的数据，使用响应重定向可以共享会话作用域中的数据。
    
-2. 
-   ```java
-   login.jsp为登录页面:
+2. login.jsp为登录页面
+```java :
 
 ＜%@ page contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%＞
 
@@ -88,6 +87,7 @@ RequestDispatcher rd =（9）request. __________  ("/welcome.jsp");
 
 
 ```
+
  1. text
  2. password
  3. submit
