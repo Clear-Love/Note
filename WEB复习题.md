@@ -8,16 +8,14 @@
    一般格式如下：_schema: schema - specific - part  
    <font color=" #ff0000 ">关系</font>：URI 是 URL 与 URN 的超集。  
 
-1. HTML 常用标签的使用（表单、文本框、确认按钮等），尤其是 form 标签，包含哪些属性？
+2. HTML 常用标签的使用（表单、文本框、确认按钮等），尤其是 form 标签，包含哪些属性？
    
    1. <font color=" #ff0000 ">method</font> 属性规定用于发送 form-data 的 HTTP 方法。实际上就是请求的方式。  
    2. <font color=" #ff0000 ">name</font> 属性表单的名称。  
    3. <font color=" #ff0000 ">action</font> 属性指定表单请求的路径。  
    4. <font color=" #ff0000 ">target</font> 属性指定 action 的 Url 在哪里打开。  
 
-3. 在服务器端动态生成 Web 页面有哪些技术？它与客户端动态 Web 文档技术有什么区别？
-   
-   Servlet 和 JSP 分别属于哪种技术？  
+3. Servlet 和 JSP 分别属于哪种技术？  
    <font color=" #ff0000 ">CGI 技术</font>，服务器扩展技术，在 HTML 页面中嵌入脚本技术  
    <font color=" #ff0000 ">Servlet </font>属于服务器扩展技术；  
    <font color=" #ff0000 ">JSP</font> 属于在 HTML 页面中嵌入脚本技术  
@@ -25,7 +23,6 @@
 4. 什么是 Servlet？什么是 JSP？他们的主要作用是什么？  
    <font color=" #ff0000 ">Servlet</font> 称为<span style="background: #d3f8b6 ">小服务程序或服务连接器</span>，用 Java 编写的服务器端程序，主要功能在于交互式地浏览和修改数据，生成动态 Web 内容。  
    <font color="#ff0000">JSP</font> 全称 Java Server Pages，<span style="background:#d3f8b6">是一种动态网页开发技术</span>，是一种 Java servlet，主要用于实现 Java web 应用程序的用户界面部分。JSP 通过网页表单获取用户输入数据、访问数据库及其他数据源，然后动态地创建网页。
-
 5. 所有 Web 应用程序的根目录是？WEB-INF 目录包含哪些内容？  
    是 <span style="background: #d3f8b6 ">WEB-INF 目录</span>。包括：  
    1、<font color=" #ff0000 ">web. xml</font> 是部署描述文件  
