@@ -1,7 +1,9 @@
 [
   "obsidian-git",
-  "table-editor-obsidian",
   "obsidian-pandoc",
   "obsidian-image-auto-upload-plugin",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "editing-toolbar",
+  "obsidian-emoji-toolbar",
+  "markdown-table-editor"
 ]

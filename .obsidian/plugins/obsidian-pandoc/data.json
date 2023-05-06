@@ -9,7 +9,7 @@
   "highDPIDiagrams": true,
   "pandoc": null,
   "pdflatex": null,
-  "outputFolder": "/file/document",
+  "outputFolder": "/data/Document",
   "extraArguments": "",
   "exportFrom": "html"
 }
