@@ -4,5 +4,6 @@
   "interfaceFontFamily": "文泉驿微米黑",
   "textFontFamily": "思源黑体 CN",
   "monospaceFontFamily": "Fira Code",
-  "cssTheme": "Obsidian Nord"
+  "cssTheme": "Obsidian Nord",
+  "baseFontSize": 14
 }
