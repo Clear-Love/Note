@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "88b14788b9ae1db7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "软件工程/第三章.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "软件测试/白盒测试.md",
+                "file": "软件工程/第三章.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "软件测试/白盒测试.md",
+                "file": "软件工程/第三章.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "软件测试/白盒测试.md"
+                "file": "软件工程/第三章.md"
               }
             }
           }
@@ -142,7 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 245.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -155,12 +168,14 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "443ef2f77a519c5c",
+  "active": "88b14788b9ae1db7",
   "lastOpenFiles": [
+    "软件工程/第三章.md",
+    "软件工程",
     "软件测试/白盒测试.md",
+    "软件测试/黑盒测试.md",
     "编译原理/编译原理作业.md",
     "白盒测试.md",
-    "软件测试/黑盒测试.md",
     "数据库作业/数据库设计.md",
     "数据库作业/第 3 章数据表的基本操作.md",
     "数据库作业/第 11 章用户权限管理.md",
