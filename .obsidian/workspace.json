@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "软件工程/第四章4.md",
+                "file": "软件工程/第四章.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "65a42c25b4692219",
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "软件工程/第四章4.md",
+                "file": "软件工程/第四章.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "软件工程/第四章4.md",
+                "file": "软件工程/第四章.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "软件工程/第四章4.md"
+                "file": "软件工程/第四章.md"
               }
             }
           }
@@ -155,7 +156,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,7 +173,7 @@
   "active": "88b14788b9ae1db7",
   "lastOpenFiles": [
     "软件工程/第三章.md",
-    "软件工程/第四章4.md",
+    "软件工程/第四章.md",
     "软件工程",
     "软件测试/白盒测试.md",
     "软件测试/黑盒测试.md",
