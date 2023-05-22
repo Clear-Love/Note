@@ -1,0 +1,25 @@
+### <font color=" #0070c0 ">嵌入式 SQL</font>
+
+就是把 SQL 语句嵌入到其他编程语言里面比如 java
+
+
+### <font color=" #0070c0 ">嵌入式 SQL 的处理过程:</font>
+
+1 预编译转换为函数调用
+2 主语言编译
+3 边成主语言所编译的类型
+
+
+### <font color=" #0070c0 ">SQL 与主语言的通信</font>
+
+1 SQL 给主语言传递状态
+2 主语言给 SQL 提供参数
+3 SQL 把查询结果交给主语言处理（游标，和主变量实现）
+
+### SQL 语句
+
+SQL 语句按照功能分为四类： 
+<font color="#ff0000">数据定义</font>：CREATE、DROP、ALTER： 
+<font color="#ff0000">数据操纵</font>：INSERT、UPDATE、DELETE： 
+<font color="#ff0000">数据查询</font>：SELECT；
+<font color="#ff0000">数据控制</font>：GRANT、REVOKE。
