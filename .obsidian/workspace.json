@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机操作系统/虚拟存储器管理模块设计.md",
-                "mode": "preview",
-                "source": true
+                "file": "软件测试/web测试.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机操作系统/虚拟存储器管理模块设计.md",
+                "file": "软件测试/web测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机操作系统/虚拟存储器管理模块设计.md",
+                "file": "软件测试/web测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机操作系统/虚拟存储器管理模块设计.md"
+                "file": "软件测试/web测试.md"
               }
             }
           }
@@ -147,20 +147,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-table-editor:Open Markdown Table Editor": false
+      "command-palette:打开命令面板": false
     }
   },
   "active": "443ef2f77a519c5c",
   "lastOpenFiles": [
+    "软件测试/黑盒测试.md",
+    "软件测试/web测试.md",
+    "软件测试/白盒测试.md",
+    "软件工程/第三章.md",
+    "软件工程/第四章.md",
+    "计算机操作系统/虚拟存储器管理模块设计.md",
     "计算机操作系统/文件管理模块设计.md",
     "计算机操作系统/进程管理模块设计.md",
-    "计算机操作系统/虚拟存储器管理模块设计.md",
     "软件工程/第四章.md.bak",
     "软件工程/第三章.md.bak",
     "软件测试/白盒测试.md.bak",
@@ -173,14 +179,10 @@
     "计算机接口作业/计算机接口作业.md.bak",
     "计算机操作系统/存贮器管理模块设计.md",
     "编译原理/编译原理作业.md",
-    "软件工程/第四章.md",
     "数据库作业/第 10 章存储过程，触发器，视图三者使用场景.md",
     "WEB复习题.md",
     "编译原理/编译原理复习.md",
     "未命名.canvas",
-    "软件测试/白盒测试.md",
-    "软件工程/第三章.md",
-    "软件测试/黑盒测试.md",
     "白盒测试.md",
     "数据库作业/数据库设计.md",
     "数据库作业/第 3 章数据表的基本操作.md",
@@ -193,7 +195,6 @@
     "数据库作业/数据库复习题.md",
     "数据库作业/数据库编程.md",
     "数据库作业/数据库恢复技术.md",
-    "数据库作业/数据库作业.md",
-    "数据库作业/数据库系统.md"
+    "数据库作业/数据库作业.md"
   ]
 }
