@@ -2,7 +2,7 @@
   "uploadByClipSwitch": true,
   "uploader": "PicGo-Core",
   "uploadServer": "http://127.0.0.1:36677/upload",
-  "picgoCorePath": "/home/lmio/.nvm/versions/node/v19.5.0/bin/picgo",
+  "picgoCorePath": "",
   "workOnNetWork": false,
   "fixPath": false,
   "applyImage": true,

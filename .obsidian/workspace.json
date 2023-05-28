@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fa1705c2cb97f318",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机图形学/复习题.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "软件测试/web测试.md",
+                "file": "计算机图形学/复习题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "软件测试/web测试.md",
+                "file": "计算机图形学/复习题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "软件测试/web测试.md"
+                "file": "计算机图形学/复习题.md"
               }
             }
           }
@@ -148,7 +161,6 @@
   "left-ribbon": {
     "hiddenItems": {
       "markdown-table-editor:Open Markdown Table Editor": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -157,10 +169,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "443ef2f77a519c5c",
+  "active": "fa1705c2cb97f318",
   "lastOpenFiles": [
-    "软件测试/黑盒测试.md",
     "软件测试/web测试.md",
+    "计算机图形学/复习题.md",
+    "计算机图形学",
+    "软件测试/黑盒测试.md",
     "软件测试/白盒测试.md",
     "软件工程/第三章.md",
     "软件工程/第四章.md",
@@ -176,7 +190,6 @@
     "计算机操作系统/文件管理模块设计.md.bak",
     "计算机操作系统/存贮器管理模块设计.md.bak",
     "计算机接口作业/计算机接口复习.md.bak",
-    "计算机接口作业/计算机接口作业.md.bak",
     "计算机操作系统/存贮器管理模块设计.md",
     "编译原理/编译原理作业.md",
     "数据库作业/第 10 章存储过程，触发器，视图三者使用场景.md",
@@ -194,7 +207,6 @@
     "数据库作业/数据库的完整性.md",
     "数据库作业/数据库复习题.md",
     "数据库作业/数据库编程.md",
-    "数据库作业/数据库恢复技术.md",
-    "数据库作业/数据库作业.md"
+    "数据库作业/数据库恢复技术.md"
   ]
 }
