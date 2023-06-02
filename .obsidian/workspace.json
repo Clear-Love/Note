@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机图形学/复习题.md",
+                "file": "软件工程/第六章.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机图形学/复习题.md",
+                "file": "软件工程/第六章.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机图形学/复习题.md",
+                "file": "软件工程/第六章.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机图形学/复习题.md"
+                "file": "软件工程/第六章.md"
               }
             }
           }
@@ -171,8 +171,19 @@
   },
   "active": "fa1705c2cb97f318",
   "lastOpenFiles": [
-    "软件测试/web测试.md",
+    "软件工程/第五章.md",
+    "软件工程/第六章.md",
     "计算机图形学/复习题.md",
+    "network/1.log",
+    "network/1.aux",
+    "network/1.pdf",
+    "network/1.tex",
+    "network",
+    "网络安全/1.tex",
+    "网络安全/未命名.md",
+    "网络安全/未命名.tex",
+    "网络安全",
+    "软件测试/web测试.md",
     "计算机图形学",
     "软件测试/黑盒测试.md",
     "软件测试/白盒测试.md",
@@ -182,14 +193,6 @@
     "计算机操作系统/文件管理模块设计.md",
     "计算机操作系统/进程管理模块设计.md",
     "软件工程/第四章.md.bak",
-    "软件工程/第三章.md.bak",
-    "软件测试/白盒测试.md.bak",
-    "软件测试/黑盒测试.md.bak",
-    "计算机操作系统/进程管理模块设计.md.bak",
-    "计算机操作系统/虚拟存储器管理模块设计.md.bak",
-    "计算机操作系统/文件管理模块设计.md.bak",
-    "计算机操作系统/存贮器管理模块设计.md.bak",
-    "计算机接口作业/计算机接口复习.md.bak",
     "计算机操作系统/存贮器管理模块设计.md",
     "编译原理/编译原理作业.md",
     "数据库作业/第 10 章存储过程，触发器，视图三者使用场景.md",
@@ -204,9 +207,6 @@
     "Excalidraw/Drawing 2023-05-04 18.54.34.excalidraw.md",
     "Excalidraw/Drawing 2023-05-04 17.39.22.excalidraw.md",
     "数据库作业/数据库大作业 —— 电子书管理系统.md",
-    "数据库作业/数据库的完整性.md",
-    "数据库作业/数据库复习题.md",
-    "数据库作业/数据库编程.md",
-    "数据库作业/数据库恢复技术.md"
+    "数据库作业/数据库的完整性.md"
   ]
 }

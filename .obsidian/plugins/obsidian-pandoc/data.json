@@ -7,9 +7,9 @@
   "displayYAMLFrontmatter": false,
   "linkStrippingBehaviour": "text",
   "highDPIDiagrams": true,
-  "pandoc": null,
-  "pdflatex": null,
-  "outputFolder": "/data/Document",
+  "pandoc": "",
+  "pdflatex": "",
+  "outputFolder": "E:\\Download",
   "extraArguments": "",
   "exportFrom": "html"
 }

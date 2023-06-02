@@ -1,9 +1,9 @@
 {
-  "accentColor": "#000000",
-  "theme": "moonstone",
-  "interfaceFontFamily": "文泉驿微米黑",
+  "accentColor": "#3b4087",
+  "theme": "system",
+  "interfaceFontFamily": "JetBrainsMono Nerd Font",
   "textFontFamily": "思源黑体 CN",
   "monospaceFontFamily": "Fira Code",
-  "cssTheme": "Obsidian Nord",
+  "cssTheme": "GitHub Theme",
   "baseFontSize": 14
 }
