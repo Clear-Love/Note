@@ -80,16 +80,23 @@ graph TB
 1. 登录与注册
 
 ![image.png](https://pan.lmio.xyz/pic/74958dce1c8bec5ee33e75067b9ccc40.png)
+
 ![image.png](https://pan.lmio.xyz/pic/18e4285d5df77744bf315c01dfee8bc8.png)
+
 ![image.png](https://pan.lmio.xyz/pic/0370545019165ef2dffc855f744cf32e.png)
+
 
 2. 菜单
  ![image.png](https://pan.lmio.xyz/pic/1709502df4392b93d1566456fc1d3316.png)
+ 
 
 
 3. 搜索和个人信息
+
    ![image.png](https://pan.lmio.xyz/pic/01dc99c8119769760dbd3e3fe80034e8.png)
 ![image.png](https://pan.lmio.xyz/pic/c60a308e59feb77fb513bb5611156d43.png)
+
+
 
 ### 2.UI实现
 
@@ -103,11 +110,15 @@ graph TB
 
 （2）App首页及个人主页
 ![home.png](https://pan.lmio.xyz/pic/1ef7a9380db03b93c993b72c7ec7eed1.png)
+
 ![menu.png](https://pan.lmio.xyz/pic/f3a4da8470a34cb6142e8e50b26efb80.png)
+
 
 （3）书单和设置
 ![image.png](https://pan.lmio.xyz/pic/c65a23a0733c7dc55b4a6853a7b976a7.png)
+
 ![image.png](https://pan.lmio.xyz/pic/da3c78d1d7c2f129849e99b935657dda.png)
+
 
 
 四、总结
