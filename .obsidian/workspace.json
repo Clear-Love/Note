@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "555e52157e44c9e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "移动应用开发/UI设计.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -106,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "软件工程/第六章.md",
+                "file": "移动应用开发/UI设计.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "软件工程/第六章.md",
+                "file": "移动应用开发/UI设计.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "软件工程/第六章.md"
+                "file": "移动应用开发/UI设计.md"
               }
             }
           }
@@ -169,10 +181,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fa1705c2cb97f318",
+  "active": "555e52157e44c9e7",
   "lastOpenFiles": [
-    "软件工程/第五章.md",
     "软件工程/第六章.md",
+    "移动应用开发/UI设计.md",
+    "移动应用开发",
+    "软件工程/第五章.md",
     "计算机图形学/复习题.md",
     "network/1.log",
     "network/1.aux",
@@ -192,7 +206,6 @@
     "计算机操作系统/虚拟存储器管理模块设计.md",
     "计算机操作系统/文件管理模块设计.md",
     "计算机操作系统/进程管理模块设计.md",
-    "软件工程/第四章.md.bak",
     "计算机操作系统/存贮器管理模块设计.md",
     "编译原理/编译原理作业.md",
     "数据库作业/第 10 章存储过程，触发器，视图三者使用场景.md",
@@ -206,7 +219,6 @@
     "Excalidraw/Drawing 2023-05-04 18.40.59.excalidraw.md",
     "Excalidraw/Drawing 2023-05-04 18.54.34.excalidraw.md",
     "Excalidraw/Drawing 2023-05-04 17.39.22.excalidraw.md",
-    "数据库作业/数据库大作业 —— 电子书管理系统.md",
-    "数据库作业/数据库的完整性.md"
+    "数据库作业/数据库大作业 —— 电子书管理系统.md"
   ]
 }

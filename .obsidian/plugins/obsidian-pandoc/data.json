@@ -10,6 +10,6 @@
   "pandoc": "",
   "pdflatex": "",
   "outputFolder": "E:\\Download",
-  "extraArguments": "",
+  "extraArguments": "\n",
   "exportFrom": "html"
 }

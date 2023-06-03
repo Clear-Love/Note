@@ -5,5 +5,6 @@
   "obsidian-emoji-toolbar",
   "markdown-table-editor",
   "obsidian-pandoc",
-  "editing-toolbar"
+  "editing-toolbar",
+  "obsidian-shellcommands"
 ]
