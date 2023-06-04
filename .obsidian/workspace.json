@@ -25,26 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "软件工程/第六章.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "555e52157e44c9e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "移动应用开发/UI设计.md",
+                "file": "软件工程/综合报告.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "移动应用开发/UI设计.md",
+                "file": "软件工程/综合报告.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "移动应用开发/UI设计.md",
+                "file": "软件工程/综合报告.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "移动应用开发/UI设计.md"
+                "file": "软件工程/综合报告.md"
               }
             }
           }
@@ -181,12 +169,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "555e52157e44c9e7",
+  "active": "fa1705c2cb97f318",
   "lastOpenFiles": [
-    "软件工程/第六章.md",
-    "移动应用开发/UI设计.md",
-    "移动应用开发",
+    "软件工程/第三章.md",
+    "软件工程/综合报告.md",
+    "软件工程/第四章.md",
     "软件工程/第五章.md",
+    "软件测试/黑盒测试.md",
+    "软件测试/web测试.md",
+    "软件测试/白盒测试.md",
+    "移动应用开发/UI设计.md",
+    "未命名",
+    "软件工程/第六章.md",
+    "数据库作业/第 3 章数据表的基本操作.md",
+    "移动应用开发",
     "计算机图形学/复习题.md",
     "network/1.log",
     "network/1.aux",
@@ -197,12 +193,6 @@
     "网络安全/未命名.md",
     "网络安全/未命名.tex",
     "网络安全",
-    "软件测试/web测试.md",
-    "计算机图形学",
-    "软件测试/黑盒测试.md",
-    "软件测试/白盒测试.md",
-    "软件工程/第三章.md",
-    "软件工程/第四章.md",
     "计算机操作系统/虚拟存储器管理模块设计.md",
     "计算机操作系统/文件管理模块设计.md",
     "计算机操作系统/进程管理模块设计.md",
@@ -214,11 +204,9 @@
     "未命名.canvas",
     "白盒测试.md",
     "数据库作业/数据库设计.md",
-    "数据库作业/第 3 章数据表的基本操作.md",
     "数据库作业/第 11 章用户权限管理.md",
     "Excalidraw/Drawing 2023-05-04 18.40.59.excalidraw.md",
     "Excalidraw/Drawing 2023-05-04 18.54.34.excalidraw.md",
-    "Excalidraw/Drawing 2023-05-04 17.39.22.excalidraw.md",
-    "数据库作业/数据库大作业 —— 电子书管理系统.md"
+    "Excalidraw/Drawing 2023-05-04 17.39.22.excalidraw.md"
   ]
 }

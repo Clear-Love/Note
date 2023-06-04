@@ -14,7 +14,7 @@
 
 3. 分别实现各个UI控件的事件处理及监听机制，形成完整功能链。
 
-## 三、**设计流程以及功能实现
+## 三、设计流程以及功能实现
 
 ### 1.设计流程图：
 ```mermaid
@@ -100,7 +100,103 @@ graph TB
 
 ### 2.UI实现
 
-（1）登录与注册
+#### (1)登录与注册
+- 主要布局文件
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<androidx.coordinatorlayout.widget.CoordinatorLayout  
+xmlns:android="http://schemas.android.com/apk/res/android"  
+xmlns:app="http://schemas.android.com/apk/res-auto"  
+xmlns:tools="http://schemas.android.com/tools"  
+android:layout_width="match_parent"  
+android:layout_height="match_parent"  
+tools:context=".ui.auth.AuthActivity"  
+android:transitionName="transition_login"  
+>  
+<LinearLayout  
+android:layout_width="match_parent"  
+android:layout_height="match_parent"  
+android:background="@color/white"  
+android:padding="30dp"  
+android:orientation="vertical">  
+  
+  
+<TextView  
+android:id="@+id/auth_title"  
+android:layout_width="wrap_content"  
+android:layout_height="wrap_content"  
+android:layout_marginTop="50dp"  
+android:text="@string/login"  
+android:textAllCaps="true"  
+android:textColor="@color/black"  
+android:textSize="40sp" />  
+<ProgressBar  
+android:id="@+id/loading"  
+android:indeterminateTint="@color/indigo"  
+android:layout_width="wrap_content"  
+android:layout_height="wrap_content"  
+android:layout_gravity="center"  
+android:layout_marginTop="64dp"  
+android:layout_marginBottom="64dp"  
+android:visibility="gone"  
+app:layout_constraintBottom_toBottomOf="parent"  
+app:layout_constraintEnd_toEndOf="@+id/password"  
+app:layout_constraintStart_toStartOf="@+id/password"  
+app:layout_constraintTop_toTopOf="parent"  
+app:layout_constraintVertical_bias="0.3"  
+tools:ignore="NotSibling" />  
+<include layout="@layout/content_auth"/>  
+  
+</LinearLayout>  
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+```
+- api接口
+```kotlin
+interface ApiService {  
+@FormUrlEncoded  
+@POST("/api/auth/login")  
+fun login(  
+@Field("username") username: String,  
+@Field("password") password: String,  
+@Field("remember") remember: Boolean  
+): Call<ApiResponse<String>>  
+  
+@FormUrlEncoded  
+@POST("/api/auth/valid-register-email")  
+fun validateRegisterEmail(  
+@Field("email") email: String  
+): Call<ApiResponse<String>>  
+  
+@FormUrlEncoded  
+@POST("/api/auth/valid-reset-email")  
+fun validateResetEmail(  
+@Field("email") email: String  
+): Call<ApiResponse<String>>  
+  
+@FormUrlEncoded  
+@POST("/api/auth/register")  
+fun registerUser(  
+@Field("username") username: String,  
+@Field("password") password: String,  
+@Field("email") email: String,  
+@Field("code") code: String  
+): Call<ApiResponse<String>>  
+  
+@FormUrlEncoded  
+@POST("/api/auth/start-reset")  
+fun startReset(  
+@Field("email") email: String,  
+@Field("code") code: String  
+): Call<ApiResponse<String>>  
+  
+@FormUrlEncoded  
+@POST("/api/auth/do-reset")  
+fun resetPassword(  
+@Field("password") password: String  
+): Call<ApiResponse<String>>  
+  
+}
+```
 ![login.png](https://pan.lmio.xyz/pic/88b7fd9c6b3221784ec8e617882d07ff.png)
 
 ![register.png](https://pan.lmio.xyz/pic/6d7e595dd12dadca337bf17c3caaa2f0.png)
@@ -108,20 +204,81 @@ graph TB
 ![valid_email.png](https://pan.lmio.xyz/pic/0ea808cfd72f99d34be4cd98f17417b6.png)
 ![reset_password.png](https://pan.lmio.xyz/pic/0daca997b3c6a2337d9efa69ee3823e6.png)
 
-（2）App首页及个人主页
+#### (2)App首页及个人主页
+- 主要布局文件
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<androidx.drawerlayout.widget.DrawerLayout  
+xmlns:android="http://schemas.android.com/apk/res/android"  
+xmlns:app="http://schemas.android.com/apk/res-auto"  
+xmlns:tools="http://schemas.android.com/tools"  
+android:id="@+id/drawer_layout"  
+android:layout_width="match_parent"  
+android:layout_height="match_parent"  
+android:fitsSystemWindows="true"  
+tools:openDrawer="start">  
+  
+<include  
+android:id="@+id/app_bar_main"  
+layout="@layout/app_bar_main"  
+android:layout_width="match_parent"  
+android:layout_height="match_parent" />  
+  
+<com.google.android.material.navigation.NavigationView  
+android:id="@+id/nav_view"  
+android:layout_width="wrap_content"  
+android:layout_height="match_parent"  
+android:layout_gravity="start"  
+android:fitsSystemWindows="true"  
+app:headerLayout="@layout/nav_header_main"  
+app:menu="@menu/activity_main_drawer" />  
+</androidx.drawerlayout.widget.DrawerLayout>
+```
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<androidx.coordinatorlayout.widget.CoordinatorLayout  
+xmlns:android="http://schemas.android.com/apk/res/android"  
+xmlns:app="http://schemas.android.com/apk/res-auto"  
+xmlns:tools="http://schemas.android.com/tools"  
+android:layout_width="match_parent"  
+android:layout_height="match_parent"  
+tools:context=".MainActivity">  
+  
+<com.google.android.material.appbar.AppBarLayout  
+android:layout_height="wrap_content"  
+android:layout_width="match_parent"  
+android:theme="@style/Theme.Mlib.AppBarOverlay">  
+  
+<com.google.android.material.appbar.MaterialToolbar  
+android:id="@+id/toolbar"  
+android:layout_width="match_parent"  
+android:layout_height="?attr/actionBarSize"  
+app:title="@string/page_title"  
+app:menu="@menu/main"  
+app:navigationIcon="@drawable/ic_menu"  
+style="@style/Widget.MaterialComponents.Toolbar.Primary"  
+/>  
+  
+</com.google.android.material.appbar.AppBarLayout>  
+  
+<include layout="@layout/content_main"/>  
+  
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+```
 ![home.png](https://pan.lmio.xyz/pic/1ef7a9380db03b93c993b72c7ec7eed1.png)
 
 ![menu.png](https://pan.lmio.xyz/pic/f3a4da8470a34cb6142e8e50b26efb80.png)
 
 
-（3）书单和设置
+#### (3)书单和设置
+
 ![image.png](https://pan.lmio.xyz/pic/c65a23a0733c7dc55b4a6853a7b976a7.png)
 
 ![image.png](https://pan.lmio.xyz/pic/da3c78d1d7c2f129849e99b935657dda.png)
 
 
 
-四、总结
+## 四、总结
 
 我在本次实验中达到了实验的目标和要求，经历了一系列的设计过程和问题解决。实验的目的是熟悉Android程序设计的基本概念，了解Android程序框架结构、界面设计和界面编程，并熟练掌握常用界面控件、布局管理器和事件处理。
 
