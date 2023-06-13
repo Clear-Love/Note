@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fa6e59e2658073a1",
+        "id": "a388804b449998ab",
         "type": "tabs",
         "children": [
           {
-            "id": "443ef2f77a519c5c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "软件测试/web测试.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fa1705c2cb97f318",
+            "id": "f982939f82a59dde",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -46,13 +33,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a842a10a60c9da56",
+            "id": "47b650a3bbed1516",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
               }
+            }
+          },
+          {
+            "id": "a842a10a60c9da56",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -71,14 +66,6 @@
             }
           },
           {
-            "id": "fb03280437057b7e",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
             "id": "dde17eb6b9d7307e",
             "type": "leaf",
             "state": {
@@ -90,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 388.5
   },
   "right": {
     "id": "65a42c25b4692219",
@@ -149,38 +136,55 @@
                 "file": "软件工程/综合报告.md"
               }
             }
+          },
+          {
+            "id": "6085963c53db5058",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 249.5,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "markdown-table-editor:Open Markdown Table Editor": false,
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fa1705c2cb97f318",
+  "active": "f982939f82a59dde",
   "lastOpenFiles": [
-    "软件工程/第三章.md",
-    "软件工程/综合报告.md",
-    "软件工程/第四章.md",
+    "软件工程/关键路径.svg",
+    "软件工程/第十章.md",
     "软件工程/第五章.md",
-    "软件测试/黑盒测试.md",
-    "软件测试/web测试.md",
-    "软件测试/白盒测试.md",
-    "移动应用开发/UI设计.md",
-    "未命名",
+    "软件工程/综合报告.md",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "软件工程/第八章.md",
+    "计算机接口作业/计算机接口作业.md",
+    "软件工程/第九章.md",
+    "软件工程/第七章.md",
+    "软件工程/第四章.md",
     "软件工程/第六章.md",
+    "4.md",
+    "软件测试/黑盒测试.md",
+    "软件工程/第三章.md",
+    "软件测试/web测试.md",
+    "移动应用开发/UI设计.md",
+    "软件测试/白盒测试.md",
+    "未命名",
     "数据库作业/第 3 章数据表的基本操作.md",
     "移动应用开发",
     "计算机图形学/复习题.md",
@@ -199,14 +203,6 @@
     "计算机操作系统/存贮器管理模块设计.md",
     "编译原理/编译原理作业.md",
     "数据库作业/第 10 章存储过程，触发器，视图三者使用场景.md",
-    "WEB复习题.md",
-    "编译原理/编译原理复习.md",
-    "未命名.canvas",
-    "白盒测试.md",
-    "数据库作业/数据库设计.md",
-    "数据库作业/第 11 章用户权限管理.md",
-    "Excalidraw/Drawing 2023-05-04 18.40.59.excalidraw.md",
-    "Excalidraw/Drawing 2023-05-04 18.54.34.excalidraw.md",
-    "Excalidraw/Drawing 2023-05-04 17.39.22.excalidraw.md"
+    "WEB复习题.md"
   ]
 }

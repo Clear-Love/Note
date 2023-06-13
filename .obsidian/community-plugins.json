@@ -3,8 +3,9 @@
   "obsidian-image-auto-upload-plugin",
   "obsidian-style-settings",
   "obsidian-emoji-toolbar",
-  "markdown-table-editor",
   "obsidian-pandoc",
   "editing-toolbar",
-  "obsidian-shellcommands"
+  "obsidian-shellcommands",
+  "table-editor-obsidian",
+  "drawio-obsidian"
 ]
