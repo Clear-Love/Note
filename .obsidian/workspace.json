@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "软件工程/综合报告.md",
+                "file": "软件工程/第一章.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f7dbddadefee2382",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "软件工程/第十章.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 388.5
+    "width": 200
   },
   "right": {
     "id": "65a42c25b4692219",
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "软件工程/综合报告.md",
+                "file": "软件工程/第十章.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "软件工程/综合报告.md",
+                "file": "软件工程/第十章.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "软件工程/综合报告.md"
+                "file": "软件工程/第十章.md"
               }
             }
           },
@@ -164,25 +177,30 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f982939f82a59dde",
+  "active": "f7dbddadefee2382",
   "lastOpenFiles": [
-    "软件工程/关键路径.svg",
-    "软件工程/第十章.md",
+    "软件工程/期末复习.md",
+    "软件工程/第七章.md",
+    "5.md",
     "软件工程/第五章.md",
+    "软件工程/第四章.md",
+    "软件工程/第十章.md",
+    "软件工程/第九章.md",
+    "软件工程/第六章.md",
+    "软件测试/黑盒测试.md",
+    "移动应用开发/UI设计.md",
+    "软件工程/第八章.md",
+    "软件工程/第二章.md",
+    "软件工程/第一章.md",
+    "3.md",
+    "软件工程/关键路径.svg",
     "软件工程/综合报告.md",
     "未命名.canvas",
     "未命名 1.canvas",
-    "软件工程/第八章.md",
     "计算机接口作业/计算机接口作业.md",
-    "软件工程/第九章.md",
-    "软件工程/第七章.md",
-    "软件工程/第四章.md",
-    "软件工程/第六章.md",
     "4.md",
-    "软件测试/黑盒测试.md",
     "软件工程/第三章.md",
     "软件测试/web测试.md",
-    "移动应用开发/UI设计.md",
     "软件测试/白盒测试.md",
     "未命名",
     "数据库作业/第 3 章数据表的基本操作.md",
@@ -199,10 +217,6 @@
     "网络安全",
     "计算机操作系统/虚拟存储器管理模块设计.md",
     "计算机操作系统/文件管理模块设计.md",
-    "计算机操作系统/进程管理模块设计.md",
-    "计算机操作系统/存贮器管理模块设计.md",
-    "编译原理/编译原理作业.md",
-    "数据库作业/第 10 章存储过程，触发器，视图三者使用场景.md",
-    "WEB复习题.md"
+    "计算机操作系统/进程管理模块设计.md"
   ]
 }
