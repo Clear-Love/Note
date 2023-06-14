@@ -1,7 +1,7 @@
 {
   "vimMode": true,
   "alwaysUpdateLinks": true,
-  "newLinkFormat": "absolute",
+  "newLinkFormat": "relative",
   "pdfExportSettings": {
     "pageSize": "Letter",
     "landscape": false,

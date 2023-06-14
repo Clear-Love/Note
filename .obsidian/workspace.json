@@ -25,6 +25,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "60e691f2b856ff36",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "软件工程/期末复习.md",
                 "mode": "source",
                 "source": false
@@ -32,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -176,17 +188,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f7dbddadefee2382",
+  "active": "60e691f2b856ff36",
   "lastOpenFiles": [
-    "软件工程/第八章.md",
+    "软件工程/第六章.md",
     "软件工程/期末复习.md",
+    "数据库作业/数据库作业.md",
+    "数据库作业/数据库编程.md",
+    "README.md",
+    "WEB复习题.md",
+    "软件工程/第八章.md",
     "软件工程/第十章.md",
     "软件工程/第七章.md",
     "5.md",
     "软件工程/第五章.md",
     "软件工程/第四章.md",
     "软件工程/第九章.md",
-    "软件工程/第六章.md",
     "软件测试/黑盒测试.md",
     "移动应用开发/UI设计.md",
     "软件工程/第二章.md",
@@ -211,11 +227,7 @@
     "network/1.tex",
     "network",
     "网络安全/1.tex",
-    "网络安全/未命名.md",
     "网络安全/未命名.tex",
-    "网络安全",
-    "计算机操作系统/虚拟存储器管理模块设计.md",
-    "计算机操作系统/文件管理模块设计.md",
-    "计算机操作系统/进程管理模块设计.md"
+    "网络安全"
   ]
 }
