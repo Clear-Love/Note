@@ -25,26 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "60e691f2b856ff36",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "软件工程/第十章.md",
+                "file": "移动应用开发/综合案例.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "软件工程/第十章.md"
+                "file": "移动应用开发/综合案例.md"
               }
             }
           },
@@ -136,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "软件工程/第十章.md",
+                "file": "移动应用开发/综合案例.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -153,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "软件工程/第十章.md",
+                "file": "移动应用开发/综合案例.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 388.5
+    "width": 388.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,11 +176,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "60e691f2b856ff36",
+  "active": "f7dbddadefee2382",
   "lastOpenFiles": [
+    "移动应用开发/sqlite数据库操作.md",
+    "移动应用开发/综合案例.md",
+    "README.md",
+    "().md",
+    "移动应用开发/UI设计.md",
+    "软件工程/第十章.md",
     "软件工程/期末复习.md",
     "软件工程/综合报告.md",
-    "软件工程/第十章.md",
     "软件工程/第四章.md",
     "软件工程/第二章.md",
     "软件工程/第一章.md",
@@ -199,7 +193,6 @@
     "软件工程/第五章.md",
     "软件工程/关键路径.svg",
     "软件工程/第三章.md",
-    "README.md",
     "数据库作业/数据库作业.md",
     "数据库作业/数据库编程.md",
     "WEB复习题.md",
@@ -208,16 +201,13 @@
     "5.md",
     "软件工程/第九章.md",
     "软件测试/黑盒测试.md",
-    "移动应用开发/UI设计.md",
     "3.md",
     "未命名.canvas",
     "未命名 1.canvas",
     "计算机接口作业/计算机接口作业.md",
     "4.md",
     "软件测试/web测试.md",
-    "软件测试/白盒测试.md",
     "未命名",
-    "数据库作业/第 3 章数据表的基本操作.md",
     "移动应用开发",
     "network/1.log",
     "network/1.aux",
