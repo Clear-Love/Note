@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "a388804b449998ab",
+        "id": "69b1baf849d1b532",
         "type": "tabs",
         "children": [
           {
-            "id": "f7dbddadefee2382",
+            "id": "718592a615f4523b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "软件工程/第八章.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9374f29ffb4c0992",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "计算机接口/第六章作业.md",
+                "file": "软件工程/综合报告.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机接口/第六章作业.md"
+                "file": "软件工程/综合报告.md"
               }
             }
           },
@@ -124,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机接口/第六章作业.md",
+                "file": "软件工程/综合报告.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -141,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机接口/第六章作业.md",
+                "file": "软件工程/综合报告.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,36 +163,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "47b650a3bbed1516",
+  "active": "718592a615f4523b",
   "lastOpenFiles": [
-    "计算机接口/第七章作业.md",
-    "计算机接口/第五章作业.md",
-    "数据库/作业二.md",
-    "人工智能/大作业.md",
-    "软件工程/第八章.md",
-    "人工智能",
-    "软件工程/第二章.md",
-    "README.md",
-    "数值分析复习题.md",
-    "软件工程/第十章.md",
-    "软件工程/第九章.md",
-    "软件工程/第七章.md",
-    "软件工程/第六章.md",
-    "移动应用开发/sqlite数据库操作.md",
-    "移动应用开发/综合案例.md",
-    "().md",
-    "移动应用开发/UI设计.md",
-    "软件工程/期末复习.md",
-    "软件工程/综合报告.md",
-    "软件工程/第四章.md",
-    "软件工程/第一章.md",
-    "软件工程/第五章.md",
     "软件工程/关键路径.svg",
+    "软件工程/第四章.md",
+    "软件工程/第五章.md",
     "软件工程/第三章.md",
+    "软件工程/第十章.md",
+    "数据库/电子书管理系统.md",
+    "软件工程/期末复习.md",
+    "数据库/存储过程与触发器的使用.md",
+    "数据库/多表查询的使用.md",
+    "数据库/用户权限管理.md",
+    "数据库/数据表的基本操作.md",
+    "数据库/存储过程，触发器，视图三者使用场景.md",
+    "数据库/作业二.md",
+    "数据库/数据库系统.md",
     "数据库/数据库作业.md",
-    "数据库/数据库编程.md",
-    "WEB复习题.md",
-    "5.md",
+    "数据库/数据库设计.md",
+    "软件测试/白盒测试.md",
+    "数据库/数据库复习题.md",
+    "软件测试/web测试.md",
+    "软件测试/黑盒测试.md",
+    "编译原理/编译原理作业.md",
+    "编译原理/编译原理复习.md",
+    "人工智能/情感分析.md",
+    "计算机操作系统/文件管理模块设计.md",
+    "计算机接口/复习题.md",
+    "计算机接口/计算机接口复习.md",
+    "人工智能",
     "未命名.canvas",
     "未命名 1.canvas",
     "移动应用开发",
